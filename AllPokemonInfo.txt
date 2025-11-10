@@ -1,0 +1,2661 @@
+OU Aegislash SteelGhost Stance ChangeHP
+60 Atk
+50 Def
+140 SpA
+50 SpD
+140 Spe
+60 BST
+500
+OU Alakazam Psychic Synchronize
+Inner FocusMagic GuardHP
+55 Atk
+50 Def
+45 SpA
+135 SpD
+95 Spe
+120 BST
+500
+OU Chesnaught GrassFighting OvergrowBulletproofHP
+88 Atk
+107 Def
+122 SpA
+74 SpD
+75 Spe
+64 BST
+530
+OU Clefable Fairy Cute Charm
+Magic GuardUnawareHP
+95 Atk
+70 Def
+73 SpA
+95 SpD
+90 Spe
+60 BST
+483
+OU Delphox-Mega FirePsychic LevitateHP
+75 Atk
+69 Def
+72 SpA
+159 SpD
+125 Spe
+134 BST
+634
+OU Dragonite DragonFlying Inner FocusMultiscaleHP
+91 Atk
+134 Def
+95 SpA
+100 SpD
+100 Spe
+80 BST
+600
+OU Dragonite-Mega DragonFlying Soul-HeartHP
+91 Atk
+124 Def
+115 SpA
+145 SpD
+125 Spe
+100 BST
+700
+OU Excadrill GroundSteel Sand Rush
+Sand ForceMold BreakerHP
+110 Atk
+135 Def
+60 SpA
+50 SpD
+65 Spe
+88 BST
+508
+OU Floette-Mega Fairy AngeHP
+74 Atk
+85 Def
+87 SpA
+155 SpD
+148 Spe
+102 BST
+651
+OU Garchomp DragonGround Sand VeilRough SkinHP
+108 Atk
+130 Def
+95 SpA
+80 SpD
+85 Spe
+102 BST
+600
+OU Gengar GhostPoison Cursed BodyHP
+60 Atk
+65 Def
+60 SpA
+130 SpD
+75 Spe
+110 BST
+500
+OU Goodra-Hisui SteelDragon Sap Sipper
+Shell ArmorGooeyHP
+80 Atk
+100 Def
+100 SpA
+110 SpD
+150 Spe
+60 BST
+600
+OU Gourgeist-Super GhostGrass Pickup
+FriskInsomniaHP
+85 Atk
+100 Def
+122 SpA
+58 SpD
+75 Spe
+54 BST
+494
+OU Greninja WaterDark TorrentProtean
+(Battle Bond)HP
+72 Atk
+95 Def
+67 SpA
+103 SpD
+71 Spe
+122 BST
+530
+OU Greninja-Bond WaterDark Battle BondHP
+72 Atk
+95 Def
+67 SpA
+103 SpD
+71 Spe
+122 BST
+530
+OU Greninja-Mega WaterDark ProteanHP
+72 Atk
+125 Def
+77 SpA
+133 SpD
+81 Spe
+142 BST
+630
+OU Gyarados WaterFlying IntimidateMoxieHP
+95 Atk
+125 Def
+79 SpA
+60 SpD
+100 Spe
+81 BST
+540
+OU Hoopa-Unbound PsychicDark MagicianHP
+80 Atk
+160 Def
+60 SpA
+170 SpD
+130 Spe
+80 BST
+680
+OU Krookodile GroundDark Intimidate
+MoxieAnger PointHP
+95 Atk
+117 Def
+80 SpA
+65 SpD
+70 Spe
+92 BST
+519
+OU Meowstic Psychic Keen Eye
+InfiltratorPranksterHP
+74 Atk
+48 Def
+76 SpA
+83 SpD
+81 Spe
+104 BST
+466
+OU Scizor BugSteel Swarm
+TechnicianLight MetalHP
+70 Atk
+130 Def
+100 SpA
+55 SpD
+80 Spe
+65 BST
+500
+OU Skarmory SteelFlying Keen Eye
+SturdyWeak ArmorHP
+65 Atk
+80 Def
+140 SpA
+40 SpD
+70 Spe
+70 BST
+465
+OU Skarmory-Mega SteelFlying Tough ClawsHP
+65 Atk
+140 Def
+110 SpA
+40 SpD
+100 Spe
+110 BST
+565
+OU Slowbro WaterPsychic Oblivious
+Own TempoRegeneratorHP
+95 Atk
+75 Def
+110 SpA
+100 SpD
+80 Spe
+30 BST
+490
+OU Slowking WaterPsychic Oblivious
+Own TempoRegeneratorHP
+95 Atk
+75 Def
+80 SpA
+100 SpD
+110 Spe
+30 BST
+490
+OU Slowking-Galar PoisonPsychic Curious Medicine
+Own TempoRegeneratorHP
+95 Atk
+65 Def
+80 SpA
+110 SpD
+110 Spe
+30 BST
+490
+OU Slurpuff Fairy Sweet VeilUnburdenHP
+82 Atk
+80 Def
+86 SpA
+85 SpD
+75 Spe
+72 BST
+480
+OU Starmie WaterPsychic Illuminate
+Natural CureAnalyticHP
+60 Atk
+75 Def
+85 SpA
+100 SpD
+85 Spe
+115 BST
+520
+OU Starmie-Mega WaterPsychic Pure PowerHP
+60 Atk
+100 Def
+105 SpA
+130 SpD
+105 Spe
+120 BST
+620
+OU Talonflame FireFlying Flame BodyGale WingsHP
+78 Atk
+81 Def
+71 SpA
+74 SpD
+69 Spe
+126 BST
+499
+OU Tyranitar RockDark Sand StreamUnnerveHP
+100 Atk
+134 Def
+110 SpA
+95 SpD
+100 Spe
+61 BST
+600
+OU Umbreon Dark SynchronizeInner FocusHP
+95 Atk
+65 Def
+110 SpA
+60 SpD
+130 Spe
+65 BST
+525
+OU Vaporeon Water Water AbsorbHydrationHP
+130 Atk
+65 Def
+60 SpA
+110 SpD
+95 Spe
+65 BST
+525
+OU Volcanion FireWater Water AbsorbHP
+80 Atk
+110 Def
+120 SpA
+130 SpD
+90 Spe
+70 BST
+600
+OU Zygarde-10% DragonGround Aura Break(Power Construct)HP
+54 Atk
+100 Def
+71 SpA
+61 SpD
+85 Spe
+115 BST
+486
+OU by technicality
+(OU) Chesnaught-Mega GrassFighting Protective ThornsHP
+88 Atk
+137 Def
+172 SpA
+74 SpD
+115 Spe
+44 BST
+630
+(OU) Clefable-Mega FairyFlying Serene GraceHP
+95 Atk
+80 Def
+93 SpA
+135 SpD
+110 Spe
+70 BST
+583
+(OU) Excadrill-Mega GroundSteel Mold BreakerHP
+110 Atk
+165 Def
+100 SpA
+65 SpD
+65 Spe
+103 BST
+608
+(OU) Garchomp-Mega DragonGround Sand ForceHP
+108 Atk
+170 Def
+115 SpA
+120 SpD
+95 Spe
+92 BST
+700
+(OU) Gyarados-Mega WaterDark Mold BreakerHP
+95 Atk
+155 Def
+109 SpA
+70 SpD
+130 Spe
+81 BST
+640
+(OU) Meowstic-F Psychic Keen Eye
+InfiltratorCompetitiveHP
+74 Atk
+48 Def
+76 SpA
+83 SpD
+81 Spe
+104 BST
+466
+(OU) Scizor-Mega BugSteel TechnicianHP
+70 Atk
+150 Def
+140 SpA
+65 SpD
+100 Spe
+75 BST
+600
+(OU) Slowbro-Mega WaterPsychic Shell ArmorHP
+95 Atk
+75 Def
+180 SpA
+130 SpD
+80 Spe
+30 BST
+590
+(OU) Tyranitar-Mega RockDark Sand StreamHP
+100 Atk
+164 Def
+150 SpA
+95 SpD
+120 Spe
+71 BST
+700
+UU Abomasnow GrassIce Snow WarningSoundproofHP
+90 Atk
+92 Def
+75 SpA
+92 SpD
+85 Spe
+60 BST
+494
+UU Abomasnow-Mega GrassIce Snow WarningHP
+90 Atk
+132 Def
+105 SpA
+132 SpD
+105 Spe
+30 BST
+594
+UU Absol Dark Pressure
+Super LuckJustifiedHP
+65 Atk
+130 Def
+60 SpA
+75 SpD
+60 Spe
+75 BST
+465
+UU Absol-Mega Dark Magic BounceHP
+65 Atk
+150 Def
+60 SpA
+115 SpD
+60 Spe
+115 BST
+565
+UU Aerodactyl RockFlying Rock Head
+PressureUnnerveHP
+80 Atk
+105 Def
+65 SpA
+60 SpD
+75 Spe
+130 BST
+515
+UU Aerodactyl-Mega RockFlying Tough ClawsHP
+80 Atk
+135 Def
+85 SpA
+70 SpD
+95 Spe
+150 BST
+615
+UU Aggron SteelRock Sturdy
+Rock HeadHeavy MetalHP
+70 Atk
+110 Def
+180 SpA
+60 SpD
+60 Spe
+50 BST
+530
+UU Aggron-Mega Steel FilterHP
+70 Atk
+140 Def
+230 SpA
+60 SpD
+80 Spe
+50 BST
+630
+UU Altaria DragonFlying Natural CureCloud NineHP
+75 Atk
+70 Def
+90 SpA
+70 SpD
+105 Spe
+80 BST
+490
+UU Altaria-Mega DragonFairy PixilateHP
+75 Atk
+110 Def
+110 SpA
+110 SpD
+105 Spe
+80 BST
+590
+UU Ampharos Electric StaticPlusHP
+90 Atk
+75 Def
+85 SpA
+115 SpD
+90 Spe
+55 BST
+510
+UU Ampharos-Mega ElectricDragon FluffyHP
+90 Atk
+95 Def
+105 SpA
+165 SpD
+110 Spe
+45 BST
+610
+UU Arbok Poison Intimidate
+Shed SkinUnnerveHP
+60 Atk
+95 Def
+69 SpA
+65 SpD
+79 Spe
+80 BST
+448
+UU Ariados BugPoison Swarm
+InsomniaSniperHP
+70 Atk
+90 Def
+70 SpA
+60 SpD
+70 Spe
+40 BST
+400
+UU Aromatisse Fairy HealerAroma VeilHP
+101 Atk
+72 Def
+72 SpA
+99 SpD
+89 Spe
+29 BST
+462
+UU Audino Normal Healer
+RegeneratorKlutzHP
+103 Atk
+60 Def
+86 SpA
+60 SpD
+86 Spe
+50 BST
+445
+UU Audino-Mega NormalFairy RegeneratorHP
+103 Atk
+60 Def
+126 SpA
+80 SpD
+126 Spe
+50 BST
+545
+UU Aurorus RockIce RefrigerateSnow WarningHP
+123 Atk
+77 Def
+72 SpA
+99 SpD
+92 Spe
+58 BST
+521
+UU Avalugg Ice Own Tempo
+Ice BodySturdyHP
+95 Atk
+117 Def
+184 SpA
+44 SpD
+46 Spe
+28 BST
+514
+UU Avalugg-Hisui IceRock Strong Jaw
+Ice BodySturdyHP
+95 Atk
+127 Def
+184 SpA
+34 SpD
+36 Spe
+38 BST
+514
+UU Banette Ghost Insomnia
+FriskCursed BodyHP
+64 Atk
+115 Def
+65 SpA
+83 SpD
+63 Spe
+65 BST
+455
+UU Banette-Mega Ghost PranksterHP
+64 Atk
+165 Def
+75 SpA
+93 SpD
+83 Spe
+75 BST
+555
+UU Barbaracle RockWater Tough Claws
+SniperPickpocketHP
+72 Atk
+105 Def
+115 SpA
+54 SpD
+86 Spe
+68 BST
+500
+UU Barbaracle-Mega RockFighting Tough ClawsHP
+72 Atk
+140 Def
+130 SpA
+64 SpD
+106 Spe
+88 BST
+600
+UU Beedrill BugPoison SwarmSniperHP
+65 Atk
+90 Def
+40 SpA
+45 SpD
+80 Spe
+75 BST
+395
+UU Beedrill-Mega BugPoison AdaptabilityHP
+65 Atk
+150 Def
+40 SpA
+15 SpD
+80 Spe
+145 BST
+495
+UU Blastoise Water TorrentRain DishHP
+79 Atk
+83 Def
+100 SpA
+85 SpD
+105 Spe
+78 BST
+530
+UU Camerupt FireGround Magma Armor
+Solid RockAnger PointHP
+70 Atk
+100 Def
+70 SpA
+105 SpD
+75 Spe
+40 BST
+460
+UU Camerupt-Mega FireGround Sheer ForceHP
+70 Atk
+120 Def
+100 SpA
+145 SpD
+105 Spe
+20 BST
+560
+UU Carbink RockFairy Clear BodySturdyHP
+50 Atk
+50 Def
+150 SpA
+50 SpD
+150 Spe
+50 BST
+500
+UU Chandelure GhostFire Flash Fire
+Flame BodyInfiltratorHP
+60 Atk
+55 Def
+90 SpA
+145 SpD
+90 Spe
+80 BST
+520
+UU Chandelure-Mega GhostFire Magic GuardHP
+60 Atk
+75 Def
+110 SpA
+175 SpD
+110 Spe
+90 BST
+620
+UU Charizard FireFlying BlazeSolar PowerHP
+78 Atk
+84 Def
+78 SpA
+109 SpD
+85 Spe
+100 BST
+534
+UU Charizard-Mega-X FireDragon Tough ClawsHP
+78 Atk
+130 Def
+111 SpA
+130 SpD
+85 Spe
+100 BST
+634
+UU Charizard-Mega-Y FireFlying DroughtHP
+78 Atk
+104 Def
+78 SpA
+159 SpD
+115 Spe
+100 BST
+634
+UU Clawitzer Water Mega LauncherHP
+71 Atk
+73 Def
+88 SpA
+120 SpD
+89 Spe
+59 BST
+500
+UU Dedenne ElectricFairy Cheek Pouch
+PickupPlusHP
+67 Atk
+58 Def
+57 SpA
+81 SpD
+67 Spe
+101 BST
+431
+UU Delibird IceFlying Vital Spirit
+HustleInsomniaHP
+45 Atk
+55 Def
+45 SpA
+65 SpD
+45 Spe
+75 BST
+330
+UU Delphox FirePsychic BlazeMagicianHP
+75 Atk
+69 Def
+72 SpA
+114 SpD
+100 Spe
+104 BST
+534
+UU Diancie RockFairy Clear BodyHP
+50 Atk
+100 Def
+150 SpA
+100 SpD
+150 Spe
+50 BST
+600
+UU Diancie-Mega RockFairy Magic BounceHP
+50 Atk
+160 Def
+110 SpA
+160 SpD
+110 Spe
+110 BST
+700
+UU Diggersby NormalGround Pickup
+Cheek PouchHuge PowerHP
+85 Atk
+56 Def
+77 SpA
+50 SpD
+77 Spe
+78 BST
+423
+UU Dragalge PoisonDragon Poison Point
+Poison TouchAdaptabilityHP
+65 Atk
+75 Def
+90 SpA
+97 SpD
+123 Spe
+44 BST
+494
+UU Dragalge-Mega PoisonDragon RegeneratorHP
+65 Atk
+85 Def
+105 SpA
+132 SpD
+163 Spe
+44 BST
+594
+UU Drampa NormalDragon Berserk
+Sap SipperCloud NineHP
+78 Atk
+60 Def
+85 SpA
+135 SpD
+91 Spe
+36 BST
+485
+UU Drampa-Mega NormalDragon DrizzleHP
+78 Atk
+85 Def
+110 SpA
+160 SpD
+116 Spe
+36 BST
+585
+UU Eelektross Electric LevitateHP
+85 Atk
+115 Def
+80 SpA
+105 SpD
+80 Spe
+50 BST
+515
+UU Eelektross-Mega Electric Ion BatteryHP
+85 Atk
+145 Def
+80 SpA
+135 SpD
+90 Spe
+80 BST
+615
+UU Emboar FireFighting BlazeRecklessHP
+110 Atk
+123 Def
+65 SpA
+100 SpD
+65 Spe
+65 BST
+528
+UU Emboar-Mega FireFighting Supreme OverlordHP
+110 Atk
+148 Def
+75 SpA
+110 SpD
+110 Spe
+75 BST
+628
+UU Emolga ElectricFlying StaticMotor DriveHP
+55 Atk
+75 Def
+60 SpA
+75 SpD
+60 Spe
+103 BST
+428
+UU Espeon Psychic SynchronizeMagic BounceHP
+65 Atk
+65 Def
+60 SpA
+130 SpD
+95 Spe
+110 BST
+525
+UU Falinks Fighting Battle ArmorDefiantHP
+65 Atk
+100 Def
+100 SpA
+70 SpD
+60 Spe
+75 BST
+470
+UU Falinks-Mega Fighting Brass BondHP
+65 Atk
+135 Def
+135 SpA
+70 SpD
+65 Spe
+100 BST
+570
+UU Feraligatr Water TorrentSheer ForceHP
+85 Atk
+105 Def
+100 SpA
+79 SpD
+83 Spe
+78 BST
+530
+UU Feraligatr-Mega WaterDragon Dragon's MawHP
+85 Atk
+160 Def
+125 SpA
+89 SpD
+93 Spe
+78 BST
+630
+UU Flareon Fire Flash FireGutsHP
+65 Atk
+130 Def
+60 SpA
+95 SpD
+110 Spe
+65 BST
+525
+UU Floette-Eternal Fairy Flower VeilSymbiosisHP
+74 Atk
+65 Def
+67 SpA
+125 SpD
+128 Spe
+92 BST
+551
+UU Florges Fairy Flower VeilSymbiosisHP
+78 Atk
+65 Def
+68 SpA
+112 SpD
+154 Spe
+75 BST
+552
+UU Froslass IceGhost Snow CloakCursed BodyHP
+70 Atk
+80 Def
+70 SpA
+80 SpD
+70 Spe
+110 BST
+480
+UU Froslass-Mega IceGhost Snow WarningHP
+70 Atk
+80 Def
+70 SpA
+140 SpD
+100 Spe
+120 BST
+580
+UU Furfrou Normal Fur CoatHP
+75 Atk
+80 Def
+60 SpA
+65 SpD
+90 Spe
+102 BST
+472
+UU Gallade PsychicFighting Steadfast
+SharpnessJustifiedHP
+68 Atk
+125 Def
+65 SpA
+65 SpD
+115 Spe
+80 BST
+518
+UU Gallade-Mega PsychicFighting SharpnessHP
+68 Atk
+165 Def
+95 SpA
+65 SpD
+115 Spe
+110 BST
+618
+UU Garbodor Poison Stench
+Weak ArmorAftermathHP
+80 Atk
+95 Def
+82 SpA
+60 SpD
+82 Spe
+75 BST
+474
+UU Gardevoir PsychicFairy Synchronize
+TraceTelepathyHP
+68 Atk
+65 Def
+65 SpA
+125 SpD
+115 Spe
+80 BST
+518
+UU Gardevoir-Mega PsychicFairy PixilateHP
+68 Atk
+85 Def
+65 SpA
+165 SpD
+135 Spe
+100 BST
+618
+UU Glaceon Ice Snow CloakIce BodyHP
+65 Atk
+60 Def
+110 SpA
+130 SpD
+95 Spe
+65 BST
+525
+UU Glalie Ice Inner Focus
+Ice BodyMoodyHP
+80 Atk
+80 Def
+80 SpA
+80 SpD
+80 Spe
+80 BST
+480
+UU Glalie-Mega Ice RefrigerateHP
+80 Atk
+120 Def
+80 SpA
+120 SpD
+80 Spe
+100 BST
+580
+UU Gogoat Grass Sap SipperGrass PeltHP
+123 Atk
+100 Def
+62 SpA
+97 SpD
+81 Spe
+68 BST
+531
+UU Goodra Dragon Sap Sipper
+HydrationGooeyHP
+90 Atk
+100 Def
+70 SpA
+110 SpD
+150 Spe
+80 BST
+600
+UU Gourgeist GhostGrass Pickup
+FriskInsomniaHP
+65 Atk
+90 Def
+122 SpA
+58 SpD
+75 Spe
+84 BST
+494
+UU Gourgeist-Large GhostGrass Pickup
+FriskInsomniaHP
+75 Atk
+95 Def
+122 SpA
+58 SpD
+75 Spe
+69 BST
+494
+UU Gourgeist-Small GhostGrass Pickup
+FriskInsomniaHP
+55 Atk
+85 Def
+122 SpA
+58 SpD
+75 Spe
+99 BST
+494
+UU Hawlucha FightingFlying Limber
+UnburdenMold BreakerHP
+78 Atk
+92 Def
+75 SpA
+74 SpD
+63 Spe
+118 BST
+500
+UU Hawlucha-Mega FightingFlying Luchador's PrideHP
+78 Atk
+137 Def
+100 SpA
+74 SpD
+93 Spe
+118 BST
+600
+UU Heliolisk ElectricNormal Dry Skin
+Sand VeilSolar PowerHP
+62 Atk
+55 Def
+52 SpA
+109 SpD
+94 Spe
+109 BST
+481
+UU Heracross BugFighting Swarm
+GutsMoxieHP
+80 Atk
+125 Def
+75 SpA
+40 SpD
+95 Spe
+85 BST
+500
+UU Heracross-Mega BugFighting Skill LinkHP
+80 Atk
+185 Def
+115 SpA
+40 SpD
+105 Spe
+75 BST
+600
+UU Hippowdon Ground Sand StreamSand ForceHP
+108 Atk
+112 Def
+118 SpA
+68 SpD
+72 Spe
+47 BST
+525
+UU Hoopa PsychicGhost MagicianHP
+80 Atk
+110 Def
+60 SpA
+150 SpD
+130 Spe
+70 BST
+600
+UU Houndoom DarkFire Early Bird
+Flash FireUnnerveHP
+75 Atk
+90 Def
+50 SpA
+110 SpD
+80 Spe
+95 BST
+500
+UU Houndoom-Mega DarkFire Solar PowerHP
+75 Atk
+90 Def
+90 SpA
+140 SpD
+90 Spe
+115 BST
+600
+UU Jolteon Electric Volt AbsorbQuick FeetHP
+65 Atk
+65 Def
+60 SpA
+110 SpD
+95 Spe
+130 BST
+525
+UU Kangaskhan Normal Early Bird
+ScrappyInner FocusHP
+105 Atk
+95 Def
+80 SpA
+40 SpD
+80 Spe
+90 BST
+490
+UU Klefki SteelFairy PranksterMagicianHP
+57 Atk
+80 Def
+91 SpA
+80 SpD
+87 Spe
+75 BST
+470
+UU Leafeon Grass Leaf GuardChlorophyllHP
+65 Atk
+110 Def
+130 SpA
+60 SpD
+65 Spe
+95 BST
+525
+UU Lopunny Normal Cute Charm
+KlutzLimberHP
+65 Atk
+76 Def
+84 SpA
+54 SpD
+96 Spe
+105 BST
+480
+UU Lopunny-Mega NormalFighting ScrappyHP
+65 Atk
+136 Def
+94 SpA
+54 SpD
+96 Spe
+135 BST
+580
+UU Lucario FightingSteel Steadfast
+Inner FocusJustifiedHP
+70 Atk
+110 Def
+70 SpA
+115 SpD
+70 Spe
+90 BST
+525
+UU Machamp Fighting Guts
+No GuardSteadfastHP
+90 Atk
+130 Def
+80 SpA
+65 SpD
+85 Spe
+55 BST
+505
+UU Malamar DarkPsychic Contrary
+Suction CupsInfiltratorHP
+86 Atk
+92 Def
+88 SpA
+68 SpD
+75 Spe
+73 BST
+482
+UU Malamar-Mega DarkPsychic ContrarianHP
+86 Atk
+102 Def
+88 SpA
+98 SpD
+120 Spe
+88 BST
+582
+UU Manectric Electric Static
+Lightning RodMinusHP
+70 Atk
+75 Def
+60 SpA
+105 SpD
+60 Spe
+105 BST
+475
+UU Manectric-Mega Electric IntimidateHP
+70 Atk
+75 Def
+80 SpA
+135 SpD
+80 Spe
+135 BST
+575
+UU Mawile SteelFairy Hyper Cutter
+IntimidateSheer ForceHP
+50 Atk
+85 Def
+85 SpA
+55 SpD
+55 Spe
+50 BST
+380
+UU Mawile-Mega SteelFairy Huge PowerHP
+50 Atk
+105 Def
+125 SpA
+55 SpD
+95 Spe
+50 BST
+480
+UU Medicham FightingPsychic Pure PowerTelepathyHP
+60 Atk
+60 Def
+75 SpA
+60 SpD
+75 Spe
+80 BST
+410
+UU Medicham-Mega FightingPsychic Pure PowerHP
+60 Atk
+100 Def
+85 SpA
+80 SpD
+85 Spe
+100 BST
+510
+UU Meganium Grass OvergrowLeaf GuardHP
+80 Atk
+82 Def
+100 SpA
+83 SpD
+100 Spe
+80 BST
+525
+UU Meganium-Mega GrassFairy Flower VeilHP
+80 Atk
+92 Def
+115 SpA
+143 SpD
+115 Spe
+80 BST
+625
+UU Metagross SteelPsychic Clear BodyLight MetalHP
+80 Atk
+135 Def
+130 SpA
+95 SpD
+90 Spe
+70 BST
+600
+UU Noivern FlyingDragon Frisk
+InfiltratorTelepathyHP
+85 Atk
+70 Def
+80 SpA
+97 SpD
+80 Spe
+123 BST
+535
+UU Pangoro FightingDark Iron Fist
+Mold BreakerScrappyHP
+95 Atk
+124 Def
+78 SpA
+69 SpD
+71 Spe
+58 BST
+495
+UU Pidgeot NormalFlying Keen Eye
+Tangled FeetBig PecksHP
+83 Atk
+80 Def
+75 SpA
+70 SpD
+70 Spe
+101 BST
+479
+UU Pidgeot-Mega NormalFlying No GuardHP
+83 Atk
+80 Def
+80 SpA
+135 SpD
+80 Spe
+121 BST
+579
+UU Pinsir Bug Hyper Cutter
+Mold BreakerMoxieHP
+65 Atk
+125 Def
+100 SpA
+55 SpD
+70 Spe
+85 BST
+500
+UU Pinsir-Mega BugFlying AerilateHP
+65 Atk
+155 Def
+120 SpA
+65 SpD
+90 Spe
+105 BST
+600
+UU Pyroar FireNormal Rivalry
+UnnerveMoxieHP
+86 Atk
+68 Def
+72 SpA
+109 SpD
+66 Spe
+106 BST
+507
+UU Pyroar-Mega FireNormal DroughtHP
+86 Atk
+88 Def
+92 SpA
+129 SpD
+86 Spe
+126 BST
+607
+UU Raichu Electric StaticLightning RodHP
+60 Atk
+90 Def
+55 SpA
+90 SpD
+80 Spe
+110 BST
+485
+UU Raichu-Alola ElectricPsychic Surge SurferHP
+60 Atk
+85 Def
+50 SpA
+95 SpD
+85 Spe
+110 BST
+485
+UU Roserade GrassPoison Natural Cure
+Poison PointTechnicianHP
+60 Atk
+70 Def
+65 SpA
+125 SpD
+105 Spe
+90 BST
+515
+UU Sableye DarkGhost Keen Eye
+StallPranksterHP
+50 Atk
+75 Def
+75 SpA
+65 SpD
+65 Spe
+50 BST
+380
+UU Sableye-Mega DarkGhost Magic BounceHP
+50 Atk
+85 Def
+125 SpA
+85 SpD
+115 Spe
+20 BST
+480
+UU Salamence DragonFlying IntimidateMoxieHP
+95 Atk
+135 Def
+80 SpA
+110 SpD
+80 Spe
+100 BST
+600
+UU Scolipede BugPoison Poison Point
+SwarmSpeed BoostHP
+60 Atk
+100 Def
+89 SpA
+55 SpD
+69 Spe
+112 BST
+485
+UU Scolipede-Mega BugPoison Tinted LensHP
+60 Atk
+140 Def
+149 SpA
+75 SpD
+99 Spe
+62 BST
+585
+UU Scrafty DarkFighting Shed Skin
+MoxieIntimidateHP
+65 Atk
+90 Def
+115 SpA
+45 SpD
+115 Spe
+58 BST
+488
+UU Scrafty-Mega DarkFighting Shed SkinHP
+65 Atk
+130 Def
+135 SpA
+55 SpD
+135 Spe
+68 BST
+588
+UU Sharpedo WaterDark Rough SkinSpeed BoostHP
+70 Atk
+120 Def
+40 SpA
+95 SpD
+40 Spe
+95 BST
+460
+UU Sharpedo-Mega WaterDark Strong JawHP
+70 Atk
+140 Def
+70 SpA
+110 SpD
+65 Spe
+105 BST
+560
+UU Simipour Water GluttonyTorrentHP
+75 Atk
+98 Def
+63 SpA
+98 SpD
+63 Spe
+101 BST
+498
+UU Simisage Grass GluttonyOvergrowHP
+75 Atk
+98 Def
+63 SpA
+98 SpD
+63 Spe
+101 BST
+498
+UU Simisear Fire GluttonyBlazeHP
+75 Atk
+98 Def
+63 SpA
+98 SpD
+63 Spe
+101 BST
+498
+UU Slowbro-Galar PoisonPsychic Quick Draw
+Own TempoRegeneratorHP
+95 Atk
+100 Def
+95 SpA
+100 SpD
+70 Spe
+30 BST
+490
+UU Steelix SteelGround Rock Head
+SturdySheer ForceHP
+75 Atk
+85 Def
+200 SpA
+55 SpD
+65 Spe
+30 BST
+510
+UU Steelix-Mega SteelGround Sand ForceHP
+75 Atk
+125 Def
+230 SpA
+55 SpD
+95 Spe
+30 BST
+610
+UU Stunfisk GroundElectric Static
+LimberSand VeilHP
+109 Atk
+66 Def
+84 SpA
+81 SpD
+99 Spe
+32 BST
+471
+UU Stunfisk-Galar GroundSteel MimicryHP
+109 Atk
+81 Def
+99 SpA
+66 SpD
+84 Spe
+32 BST
+471
+UU Sylveon Fairy Cute CharmPixilateHP
+95 Atk
+65 Def
+65 SpA
+110 SpD
+130 Spe
+60 BST
+525
+UU Trevenant GhostGrass Natural Cure
+FriskHarvestHP
+85 Atk
+110 Def
+76 SpA
+65 SpD
+82 Spe
+56 BST
+474
+UU Tyrantrum RockDragon Strong JawRock HeadHP
+82 Atk
+121 Def
+119 SpA
+69 SpD
+59 Spe
+71 BST
+521
+UU Vanilluxe Ice Ice Body
+Snow WarningWeak ArmorHP
+71 Atk
+95 Def
+85 SpA
+110 SpD
+95 Spe
+79 BST
+535
+UU Venusaur GrassPoison OvergrowChlorophyllHP
+80 Atk
+82 Def
+83 SpA
+100 SpD
+100 Spe
+80 BST
+525
+UU Venusaur-Mega GrassPoison Thick FatHP
+80 Atk
+100 Def
+123 SpA
+122 SpD
+120 Spe
+80 BST
+625
+UU Victreebel GrassPoison ChlorophyllGluttonyHP
+80 Atk
+105 Def
+65 SpA
+100 SpD
+70 Spe
+70 BST
+490
+UU Victreebel-Mega GrassPoison CorrosionHP
+80 Atk
+125 Def
+85 SpA
+135 SpD
+95 Spe
+70 BST
+590
+UU Vivillon BugFlying Shield Dust
+Compound EyesFriend GuardHP
+80 Atk
+52 Def
+50 SpA
+90 SpD
+50 Spe
+89 BST
+411
+UU Vivillon-Fancy BugFlying Shield Dust
+Compound EyesFriend GuardHP
+80 Atk
+52 Def
+50 SpA
+90 SpD
+50 Spe
+89 BST
+411
+UU Vivillon-Pokeball BugFlying Shield Dust
+Compound EyesFriend GuardHP
+80 Atk
+52 Def
+50 SpA
+90 SpD
+50 Spe
+89 BST
+411
+UU Watchog Normal Illuminate
+Keen EyeAnalyticHP
+60 Atk
+85 Def
+69 SpA
+60 SpD
+69 Spe
+77 BST
+420
+NFEs not in a higher tier
+NFE Bayleef Grass OvergrowLeaf GuardHP
+60 Atk
+62 Def
+80 SpA
+63 SpD
+80 Spe
+60 BST
+405
+NFE Braixen Fire BlazeMagicianHP
+59 Atk
+59 Def
+58 SpA
+90 SpD
+70 Spe
+73 BST
+409
+NFE Charmeleon Fire BlazeSolar PowerHP
+58 Atk
+64 Def
+58 SpA
+80 SpD
+65 Spe
+80 BST
+405
+NFE Clefairy Fairy Cute Charm
+Magic GuardFriend GuardHP
+70 Atk
+45 Def
+48 SpA
+60 SpD
+65 Spe
+35 BST
+323
+NFE Croconaw Water TorrentSheer ForceHP
+65 Atk
+80 Def
+80 SpA
+59 SpD
+63 Spe
+58 BST
+405
+NFE Doublade SteelGhost No GuardHP
+59 Atk
+110 Def
+150 SpA
+45 SpD
+49 Spe
+35 BST
+448
+NFE Dragonair Dragon Shed SkinMarvel ScaleHP
+61 Atk
+84 Def
+65 SpA
+70 SpD
+70 Spe
+70 BST
+420
+NFE Eelektrik Electric LevitateHP
+65 Atk
+85 Def
+70 SpA
+75 SpD
+70 Spe
+40 BST
+405
+NFE Flaaffy Electric StaticPlusHP
+70 Atk
+55 Def
+55 SpA
+80 SpD
+60 Spe
+45 BST
+365
+NFE Fletchinder FireFlying Flame BodyGale WingsHP
+62 Atk
+73 Def
+55 SpA
+56 SpD
+52 Spe
+84 BST
+382
+NFE Floette Fairy Flower VeilSymbiosisHP
+54 Atk
+45 Def
+47 SpA
+75 SpD
+98 Spe
+52 BST
+371
+NFE Frogadier Water TorrentProteanHP
+54 Atk
+63 Def
+52 SpA
+83 SpD
+56 Spe
+97 BST
+405
+NFE Gabite DragonGround Sand VeilRough SkinHP
+68 Atk
+90 Def
+65 SpA
+50 SpD
+55 Spe
+82 BST
+410
+NFE Haunter GhostPoison LevitateHP
+45 Atk
+50 Def
+45 SpA
+115 SpD
+55 Spe
+95 BST
+405
+NFE Ivysaur GrassPoison OvergrowChlorophyllHP
+60 Atk
+62 Def
+63 SpA
+80 SpD
+80 Spe
+60 BST
+405
+NFE Kadabra Psychic Synchronize
+Inner FocusMagic GuardHP
+40 Atk
+35 Def
+30 SpA
+120 SpD
+70 Spe
+105 BST
+400
+NFE Kakuna BugPoison Shed SkinHP
+45 Atk
+25 Def
+50 SpA
+25 SpD
+25 Spe
+35 BST
+205
+NFE Kirlia PsychicFairy Synchronize
+TraceTelepathyHP
+38 Atk
+35 Def
+35 SpA
+65 SpD
+55 Spe
+50 BST
+278
+NFE Krokorok GroundDark Intimidate
+MoxieAnger PointHP
+60 Atk
+82 Def
+45 SpA
+45 SpD
+45 Spe
+74 BST
+351
+NFE Lairon SteelRock Sturdy
+Rock HeadHeavy MetalHP
+60 Atk
+90 Def
+140 SpA
+50 SpD
+50 Spe
+40 BST
+430
+NFE Lampent GhostFire Flash Fire
+Flame BodyInfiltratorHP
+60 Atk
+40 Def
+60 SpA
+95 SpD
+60 Spe
+55 BST
+370
+NFE Machoke Fighting Guts
+No GuardSteadfastHP
+80 Atk
+100 Def
+70 SpA
+50 SpD
+60 Spe
+45 BST
+405
+NFE Metang SteelPsychic Clear BodyLight MetalHP
+60 Atk
+75 Def
+100 SpA
+55 SpD
+80 Spe
+50 BST
+420
+NFE Pidgeotto NormalFlying Keen Eye
+Tangled FeetBig PecksHP
+63 Atk
+60 Def
+55 SpA
+50 SpD
+50 Spe
+71 BST
+349
+NFE Pignite FireFighting BlazeThick FatHP
+90 Atk
+93 Def
+55 SpA
+70 SpD
+55 Spe
+55 BST
+418
+NFE Pikachu Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Alola Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Hoenn Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Kalos Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Original Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Partner Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Sinnoh Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-Unova Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pikachu-World Electric StaticLightning RodHP
+35 Atk
+55 Def
+40 SpA
+50 SpD
+50 Spe
+90 BST
+320
+NFE Pupitar RockGround Shed SkinHP
+70 Atk
+84 Def
+70 SpA
+65 SpD
+70 Spe
+51 BST
+410
+NFE Quilladin Grass OvergrowBulletproofHP
+61 Atk
+78 Def
+95 SpA
+56 SpD
+58 Spe
+57 BST
+405
+NFE Roselia GrassPoison Natural Cure
+Poison PointLeaf GuardHP
+50 Atk
+60 Def
+45 SpA
+100 SpD
+80 Spe
+65 BST
+400
+NFE Shelgon Dragon Rock HeadOvercoatHP
+65 Atk
+95 Def
+100 SpA
+60 SpD
+50 Spe
+50 BST
+420
+NFE Sliggoo Dragon Sap Sipper
+HydrationGooeyHP
+68 Atk
+75 Def
+53 SpA
+83 SpD
+113 Spe
+60 BST
+452
+NFE Sliggoo-Hisui SteelDragon Sap Sipper
+Shell ArmorGooeyHP
+58 Atk
+75 Def
+83 SpA
+83 SpD
+113 Spe
+40 BST
+452
+NFE Spewpa Bug Shed SkinFriend GuardHP
+45 Atk
+22 Def
+60 SpA
+27 SpD
+30 Spe
+29 BST
+213
+NFE Vanillish Ice Ice Body
+Snow CloakWeak ArmorHP
+51 Atk
+65 Def
+65 SpA
+80 SpD
+75 Spe
+59 BST
+395
+NFE Wartortle Water TorrentRain DishHP
+59 Atk
+63 Def
+80 SpA
+65 SpD
+80 Spe
+58 BST
+405
+NFE Weepinbell GrassPoison ChlorophyllGluttonyHP
+65 Atk
+90 Def
+50 SpA
+85 SpD
+45 Spe
+55 BST
+390
+NFE Whirlipede BugPoison Poison Point
+SwarmSpeed BoostHP
+40 Atk
+55 Def
+99 SpA
+40 SpD
+79 Spe
+47 BST
+360
+LC
+LC Abra Psychic Synchronize
+Inner FocusMagic GuardHP
+25 Atk
+20 Def
+15 SpA
+105 SpD
+55 Spe
+90 BST
+310
+LC Amaura RockIce RefrigerateSnow WarningHP
+77 Atk
+59 Def
+50 SpA
+67 SpD
+63 Spe
+46 BST
+362
+LC Aron SteelRock Sturdy
+Rock HeadHeavy MetalHP
+50 Atk
+70 Def
+100 SpA
+40 SpD
+40 Spe
+30 BST
+330
+LC Bagon Dragon Rock HeadSheer ForceHP
+45 Atk
+75 Def
+60 SpA
+40 SpD
+30 Spe
+50 BST
+300
+LC Beldum SteelPsychic Clear BodyLight MetalHP
+40 Atk
+55 Def
+80 SpA
+35 SpD
+60 Spe
+30 BST
+300
+LC Bellsprout GrassPoison ChlorophyllGluttonyHP
+50 Atk
+75 Def
+35 SpA
+70 SpD
+30 Spe
+40 BST
+300
+LC Bergmite Ice Own Tempo
+Ice BodySturdyHP
+55 Atk
+69 Def
+85 SpA
+32 SpD
+35 Spe
+28 BST
+304
+LC Binacle RockWater Tough Claws
+SniperPickpocketHP
+42 Atk
+52 Def
+67 SpA
+39 SpD
+56 Spe
+50 BST
+306
+LC Budew GrassPoison Natural Cure
+Poison PointLeaf GuardHP
+40 Atk
+30 Def
+35 SpA
+50 SpD
+70 Spe
+55 BST
+280
+LC Bulbasaur GrassPoison OvergrowChlorophyllHP
+45 Atk
+49 Def
+49 SpA
+65 SpD
+65 Spe
+45 BST
+318
+LC Buneary Normal Run Away
+KlutzLimberHP
+55 Atk
+66 Def
+44 SpA
+44 SpD
+56 Spe
+85 BST
+350
+LC Bunnelby Normal Pickup
+Cheek PouchHuge PowerHP
+38 Atk
+36 Def
+38 SpA
+32 SpD
+36 Spe
+57 BST
+237
+LC Carvanha WaterDark Rough SkinSpeed BoostHP
+45 Atk
+90 Def
+20 SpA
+65 SpD
+20 Spe
+65 BST
+305
+LC Charmander Fire BlazeSolar PowerHP
+39 Atk
+52 Def
+43 SpA
+60 SpD
+50 Spe
+65 BST
+309
+LC Chespin Grass OvergrowBulletproofHP
+56 Atk
+61 Def
+65 SpA
+48 SpD
+45 Spe
+38 BST
+313
+LC Chikorita Grass OvergrowLeaf GuardHP
+45 Atk
+49 Def
+65 SpA
+49 SpD
+65 Spe
+45 BST
+318
+LC Clauncher Water Mega LauncherHP
+50 Atk
+53 Def
+62 SpA
+58 SpD
+63 Spe
+44 BST
+330
+LC Cleffa Fairy Cute Charm
+Magic GuardFriend GuardHP
+50 Atk
+25 Def
+28 SpA
+45 SpD
+55 Spe
+15 BST
+218
+LC Dratini Dragon Shed SkinMarvel ScaleHP
+41 Atk
+64 Def
+45 SpA
+50 SpD
+50 Spe
+50 BST
+300
+LC Drilbur Ground Sand Rush
+Sand ForceMold BreakerHP
+60 Atk
+85 Def
+40 SpA
+30 SpD
+45 Spe
+68 BST
+328
+LC Eevee Normal Run Away
+AdaptabilityAnticipationHP
+55 Atk
+55 Def
+50 SpA
+45 SpD
+65 Spe
+55 BST
+325
+LC Ekans Poison Intimidate
+Shed SkinUnnerveHP
+35 Atk
+60 Def
+44 SpA
+40 SpD
+54 Spe
+55 BST
+288
+LC Electrike Electric Static
+Lightning RodMinusHP
+40 Atk
+45 Def
+40 SpA
+65 SpD
+40 Spe
+65 BST
+295
+LC Espurr Psychic Keen Eye
+InfiltratorOwn TempoHP
+62 Atk
+48 Def
+54 SpA
+63 SpD
+60 Spe
+68 BST
+355
+LC Fennekin Fire BlazeMagicianHP
+40 Atk
+45 Def
+40 SpA
+62 SpD
+60 Spe
+60 BST
+307
+LC Flabébé Fairy Flower VeilSymbiosisHP
+44 Atk
+38 Def
+39 SpA
+61 SpD
+79 Spe
+42 BST
+303
+LC Fletchling NormalFlying Big PecksGale WingsHP
+45 Atk
+50 Def
+43 SpA
+40 SpD
+38 Spe
+62 BST
+278
+LC Froakie Water TorrentProteanHP
+41 Atk
+56 Def
+40 SpA
+62 SpD
+44 Spe
+71 BST
+314
+LC Gastly GhostPoison LevitateHP
+30 Atk
+35 Def
+30 SpA
+100 SpD
+35 Spe
+80 BST
+310
+LC Gible DragonGround Sand VeilRough SkinHP
+58 Atk
+70 Def
+45 SpA
+40 SpD
+45 Spe
+42 BST
+300
+LC Goomy Dragon Sap Sipper
+HydrationGooeyHP
+45 Atk
+50 Def
+35 SpA
+55 SpD
+75 Spe
+40 BST
+300
+LC Helioptile ElectricNormal Dry Skin
+Sand VeilSolar PowerHP
+44 Atk
+38 Def
+33 SpA
+61 SpD
+43 Spe
+70 BST
+289
+LC Hippopotas Ground Sand StreamSand ForceHP
+68 Atk
+72 Def
+78 SpA
+38 SpD
+42 Spe
+32 BST
+330
+LC Honedge SteelGhost No GuardHP
+45 Atk
+80 Def
+100 SpA
+35 SpD
+37 Spe
+28 BST
+325
+LC Houndour DarkFire Early Bird
+Flash FireUnnerveHP
+45 Atk
+60 Def
+30 SpA
+80 SpD
+50 Spe
+65 BST
+330
+LC Inkay DarkPsychic Contrary
+Suction CupsInfiltratorHP
+53 Atk
+54 Def
+53 SpA
+37 SpD
+46 Spe
+45 BST
+288
+LC Larvitar RockGround GutsSand VeilHP
+50 Atk
+64 Def
+50 SpA
+45 SpD
+50 Spe
+41 BST
+300
+LC Litleo FireNormal Rivalry
+UnnerveMoxieHP
+62 Atk
+50 Def
+58 SpA
+73 SpD
+54 Spe
+72 BST
+369
+LC Litwick GhostFire Flash Fire
+Flame BodyInfiltratorHP
+50 Atk
+30 Def
+55 SpA
+65 SpD
+55 Spe
+20 BST
+275
+LC Machop Fighting Guts
+No GuardSteadfastHP
+70 Atk
+80 Def
+50 SpA
+35 SpD
+35 Spe
+35 BST
+305
+LC Magikarp Water Swift SwimRattledHP
+20 Atk
+10 Def
+55 SpA
+15 SpD
+20 Spe
+80 BST
+200
+LC Mareep Electric StaticPlusHP
+55 Atk
+40 Def
+40 SpA
+65 SpD
+45 Spe
+35 BST
+280
+LC Meditite FightingPsychic Pure PowerTelepathyHP
+30 Atk
+40 Def
+55 SpA
+40 SpD
+55 Spe
+60 BST
+280
+LC Noibat FlyingDragon Frisk
+InfiltratorTelepathyHP
+40 Atk
+30 Def
+35 SpA
+45 SpD
+40 Spe
+55 BST
+245
+LC Numel FireGround Oblivious
+SimpleOwn TempoHP
+60 Atk
+60 Def
+40 SpA
+65 SpD
+45 Spe
+35 BST
+305
+LC Onix RockGround Rock Head
+SturdyWeak ArmorHP
+35 Atk
+45 Def
+160 SpA
+30 SpD
+45 Spe
+70 BST
+385
+LC Pancham Fighting Iron Fist
+Mold BreakerScrappyHP
+67 Atk
+82 Def
+62 SpA
+46 SpD
+48 Spe
+43 BST
+348
+LC Panpour Water GluttonyTorrentHP
+50 Atk
+53 Def
+48 SpA
+53 SpD
+48 Spe
+64 BST
+316
+LC Pansage Grass GluttonyOvergrowHP
+50 Atk
+53 Def
+48 SpA
+53 SpD
+48 Spe
+64 BST
+316
+LC Pansear Fire GluttonyBlazeHP
+50 Atk
+53 Def
+48 SpA
+53 SpD
+48 Spe
+64 BST
+316
+LC Patrat Normal Run Away
+Keen EyeAnalyticHP
+45 Atk
+55 Def
+39 SpA
+35 SpD
+39 Spe
+42 BST
+255
+LC Phantump GhostGrass Natural Cure
+FriskHarvestHP
+43 Atk
+70 Def
+48 SpA
+50 SpD
+60 Spe
+38 BST
+309
+LC Pichu Electric StaticLightning RodHP
+20 Atk
+40 Def
+15 SpA
+35 SpD
+35 Spe
+60 BST
+205
+LC Pidgey NormalFlying Keen Eye
+Tangled FeetBig PecksHP
+40 Atk
+45 Def
+40 SpA
+35 SpD
+35 Spe
+56 BST
+251
+LC Pumpkaboo GhostGrass Pickup
+FriskInsomniaHP
+49 Atk
+66 Def
+70 SpA
+44 SpD
+55 Spe
+51 BST
+335
+LC Pumpkaboo-Large GhostGrass Pickup
+FriskInsomniaHP
+54 Atk
+66 Def
+70 SpA
+44 SpD
+55 Spe
+46 BST
+335
+LC Pumpkaboo-Small GhostGrass Pickup
+FriskInsomniaHP
+44 Atk
+66 Def
+70 SpA
+44 SpD
+55 Spe
+56 BST
+335
+LC Pumpkaboo-Super GhostGrass Pickup
+FriskInsomniaHP
+59 Atk
+66 Def
+70 SpA
+44 SpD
+55 Spe
+41 BST
+335
+LC Ralts PsychicFairy Synchronize
+TraceTelepathyHP
+28 Atk
+25 Def
+25 SpA
+45 SpD
+35 Spe
+40 BST
+198
+LC Riolu Fighting Steadfast
+Inner FocusPranksterHP
+40 Atk
+70 Def
+40 SpA
+35 SpD
+40 Spe
+60 BST
+285
+LC Sandile GroundDark Intimidate
+MoxieAnger PointHP
+50 Atk
+72 Def
+35 SpA
+35 SpD
+35 Spe
+65 BST
+292
+LC Scatterbug Bug Shield Dust
+Compound EyesFriend GuardHP
+38 Atk
+35 Def
+40 SpA
+27 SpD
+25 Spe
+35 BST
+200
+LC Scraggy DarkFighting Shed Skin
+MoxieIntimidateHP
+50 Atk
+75 Def
+70 SpA
+35 SpD
+70 Spe
+48 BST
+348
+LC Scyther BugFlying Swarm
+TechnicianSteadfastHP
+70 Atk
+110 Def
+80 SpA
+55 SpD
+80 Spe
+105 BST
+500
+LC Shuppet Ghost Insomnia
+FriskCursed BodyHP
+44 Atk
+75 Def
+35 SpA
+63 SpD
+33 Spe
+45 BST
+295
+LC Skiddo Grass Sap SipperGrass PeltHP
+66 Atk
+65 Def
+48 SpA
+62 SpD
+57 Spe
+52 BST
+350
+LC Skrelp PoisonWater Poison Point
+Poison TouchAdaptabilityHP
+50 Atk
+60 Def
+60 SpA
+60 SpD
+60 Spe
+30 BST
+320
+LC Slowpoke WaterPsychic Oblivious
+Own TempoRegeneratorHP
+90 Atk
+65 Def
+65 SpA
+40 SpD
+40 Spe
+15 BST
+315
+LC Slowpoke-Galar Psychic Gluttony
+Own TempoRegeneratorHP
+90 Atk
+65 Def
+65 SpA
+40 SpD
+40 Spe
+15 BST
+315
+LC Snorunt Ice Inner Focus
+Ice BodyMoodyHP
+50 Atk
+50 Def
+50 SpA
+50 SpD
+50 Spe
+50 BST
+300
+LC Snover GrassIce Snow WarningSoundproofHP
+60 Atk
+62 Def
+50 SpA
+62 SpD
+60 Spe
+40 BST
+334
+LC Spinarak BugPoison Swarm
+InsomniaSniperHP
+40 Atk
+60 Def
+40 SpA
+40 SpD
+40 Spe
+30 BST
+250
+LC Spritzee Fairy HealerAroma VeilHP
+78 Atk
+52 Def
+60 SpA
+63 SpD
+65 Spe
+23 BST
+341
+LC Squirtle Water TorrentRain DishHP
+44 Atk
+48 Def
+65 SpA
+50 SpD
+64 Spe
+43 BST
+314
+LC Staryu Water Illuminate
+Natural CureAnalyticHP
+30 Atk
+45 Def
+55 SpA
+70 SpD
+55 Spe
+85 BST
+340
+LC Swablu NormalFlying Natural CureCloud NineHP
+45 Atk
+40 Def
+60 SpA
+40 SpD
+75 Spe
+50 BST
+310
+LC Swirlix Fairy Sweet VeilUnburdenHP
+62 Atk
+48 Def
+66 SpA
+59 SpD
+57 Spe
+49 BST
+341
+LC Tepig Fire BlazeThick FatHP
+65 Atk
+63 Def
+45 SpA
+45 SpD
+45 Spe
+45 BST
+308
+LC Totodile Water TorrentSheer ForceHP
+50 Atk
+65 Def
+64 SpA
+44 SpD
+48 Spe
+43 BST
+314
+LC Trubbish Poison Stench
+Sticky HoldAftermathHP
+50 Atk
+50 Def
+62 SpA
+40 SpD
+62 Spe
+65 BST
+329
+LC Tynamo Electric LevitateHP
+35 Atk
+55 Def
+40 SpA
+45 SpD
+40 Spe
+60 BST
+275
+LC Tyrunt RockDragon Strong JawSturdyHP
+58 Atk
+89 Def
+77 SpA
+45 SpD
+45 Spe
+48 BST
+362
+LC Vanillite Ice Ice Body
+Snow CloakWeak ArmorHP
+36 Atk
+50 Def
+50 SpA
+65 SpD
+60 Spe
+44 BST
+305
+LC Venipede BugPoison Poison Point
+SwarmSpeed BoostHP
+30 Atk
+45 Def
+59 SpA
+30 SpD
+39 Spe
+57 BST
+260
+LC
