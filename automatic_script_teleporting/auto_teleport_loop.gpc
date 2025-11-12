@@ -93,7 +93,7 @@ combo wild_zones_map_to_menu {
 	wait(100);
 }
 
-combo centrico_plaza {
+combo fast_travel_centrico_plaza {
 	combo_run(all_locations_map_to_menu);
 	set_val(SWI_A, 100);
 	wait(100);
@@ -101,7 +101,7 @@ combo centrico_plaza {
 	wait(100);
 }
 
-combo gare_de_lumiose {
+combo fast_travel_gare_de_lumiose {
 	combo_run(all_locations_map_to_menu);
 	set_val(SWI_DOWN, 100);
 	wait(100);
@@ -113,7 +113,7 @@ combo gare_de_lumiose {
 	wait(100);
 }
 
-combo pokemon_research_lab {
+combo fast_travel_pokemon_research_lab {
 	combo_run(all_locations_map_to_menu);
 	set_val(SWI_DOWN, 100);
 	wait(100);
