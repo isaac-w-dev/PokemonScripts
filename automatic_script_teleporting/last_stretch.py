@@ -79,4 +79,5 @@ def all_shortest_paths():
     for i in range(len(locations)):
         info_set = shortest_path(locations[i])
 
-all_shortest_paths()
+
+if '__name__' == '__main__': all_shortest_paths()
