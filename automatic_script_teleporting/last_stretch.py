@@ -26,7 +26,7 @@ def find_closest_point(target_index, jump_points, direction, filter):
     # print(f'***SHORTEST JUMP POINT FOR {direction.upper()} DIRECTION***\nOF: {steps[target_index]} steps\nAT: {coordinates[target_index]}\n{filter.upper()}\n')
     return coordinates[target_index], steps[target_index], direction
 
-
+# Probably can be optimized
 def forward_or_backward(f_coordinate, b_coordinate):
     # print("Forward Coordinate:", f_coordinate)
     # print("Reverse Coordinate:", b_coordinate)
@@ -37,6 +37,7 @@ def forward_or_backward(f_coordinate, b_coordinate):
 
 
 # Compares the steps returned by the forward jump points, and backward, and finds the shortest route to the desired index
+# Probably can be optimized
 def get_steps(location_name, location_array):
     filter = "All Locations"
     backward_allowed = True
@@ -66,11 +67,11 @@ def shortest_path(location):
     unfiltered_coordinates, usteps, location_name, ufilter = get_steps(location, locations)
     filtered_coordinates, fsteps, location_name, filter  = get_steps(location, locations_by_type)
     if fsteps < usteps:
-        print(f'***ABSOLUTE SHORTEST PATH FOR: {location.upper()}***\n{filter}\nSteps: {fsteps}\nCoordinates: {filtered_coordinates}\n')
+        # print(f'***ABSOLUTE SHORTEST PATH FOR: {location.upper()}***\n{filter}\nSteps: {fsteps}\nCoordinates: {filtered_coordinates}\n')
         return filtered_coordinates, location_name, filter
     
     else:
-        print(f'***ABSOLUTE SHORTEST PATH FOR: {location.upper()}***\n{ufilter}\nSteps: {usteps}\nCoordinates: {unfiltered_coordinates}\n')
+        # print(f'***ABSOLUTE SHORTEST PATH FOR: {location.upper()}***\n{ufilter}\nSteps: {usteps}\nCoordinates: {unfiltered_coordinates}\n')
         return unfiltered_coordinates, location_name, ufilter
 
 # Finds the shortest path for every location

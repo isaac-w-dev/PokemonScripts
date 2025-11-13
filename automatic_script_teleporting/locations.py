@@ -1,8 +1,8 @@
 locations = [
 "Centrico Plaza", "Gare de Lumiose", "Pokemon Research Lab", "Hotel Z", "Vert Pokemon Center", "Racine Construction", "Restaurant Le Nah",
-"Cafe Cyclone", "Cafe Classe", "Cafe Introversion", "Nouveau Cafe", "Rust Syndicate Office", "Lumiose Sewers (South)", "Bleu Pokemon Center",
+"Cafe Cyclone", "Cafe Classe", "Cafe Introversion", "Nouveau Cafe", "Rust Syndicate Office", "Lumiose Sewers (Main Access)", "Bleu Pokemon Center",
 "Vernal Pokemon Center", "Cafe Woof", "Cafe Soleil", "Shutterbug Cafe", "Nouveau Cafe Truck No. 2", "Quasartico Inc.", "Lysandre Cafe",
-"Lumiose Sewers (West)", "Magenta Pokemon Center", "Magenta Plaza Pokemon Center", "Cafe Pokemon-Amie", "Cafe Rouleau", "Cafe Gallant", "Cafe Triste",
+"Lumiose Sewers (Canal Access)", "Magenta Pokemon Center", "Magenta Plaza Pokemon Center", "Cafe Pokemon-Amie", "Cafe Rouleau", "Cafe Gallant", "Cafe Triste",
 "Nouveau Cafe Truck No. 3", "Hotel Richissime", "Looker Bureau", "Lumiose Museum", "Rouge Pokemon Center", "Centrico Pokemon Center", "Restaurant Le Yeah",
 "Sushi High Roller", "Restaurant Le Wow", "Justice Dojo", "Jaune Pokemon Center", "Hibernal Pokemon Center", "Cafe Ultimo", "Cafe Action",
 "Cafe Kizuna", "Cafe Bataille", "Wild Zone 1", "Wild Zone 2", "Wild Zone 3", "Wild Zone 4", "Wild Zone 5",
