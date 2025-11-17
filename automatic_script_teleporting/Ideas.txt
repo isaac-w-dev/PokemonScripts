@@ -1,0 +1,17 @@
+Needs to filter out non-starters before displaying
+Needs clarification on filtered, unfiltered, forward, or backward
+LED Display shows, direction, filtered, number of steps, and location
+Create script to write script with init for filtered
+Script for checking on all alphas in center
+Script for running back and forth
+    Block input from the left stick to avoid drift??
+AFK Money Farm
+Door Exploit Script
+Fossil Exploit
+Failsafe that restarts from absolute beginning
+Learn to automate testing
+Read in information from pikalytics
+Type matchup automation
+Script to measure distance of running
+Document and refactor code
+Save processing with adjusted logic flow
