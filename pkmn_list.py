@@ -1,4 +1,4 @@
-from pokemon import pokemon
+from classes.pokemon import pokemon
 
 pk_list = [
 	pokemon('OU', 'Aegislash', ['Steel', 'Ghost'], ['Stance Change'],60, 50, 140, 50, 140, 60, 500),

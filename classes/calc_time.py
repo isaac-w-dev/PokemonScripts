@@ -3,4 +3,4 @@ class Time():
         pass
 
     def calc_odds(self):
-        
+        pass
