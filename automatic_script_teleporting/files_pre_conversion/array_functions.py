@@ -14,14 +14,3 @@ def write_array_to_file(array, array_name = "full_coordinate_array"):
                 file.write(f'{item}, ')
             file.write(f'{list[-1]}], ')
         file.write(f'[{array[-1][0]}, {array[-1][1]}, {array[-1][2]}]]\n')
-
-def insert_string_array_data(location_data, file):
-    variable_names = ["locations", "categories"]
-    i = 0
-
-    for array in location_data:
-        file.write(f'const string {variable_names[i]}[][] = ' + '{\n')
-        for item in array[:-1]:
-            file.write(r'"'+ f'{item}' + r'", ')
-        file.write(r'"' + f'{array[-1]}' + r'"'+ "\n};\n\n")
-        i += 1

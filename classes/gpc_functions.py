@@ -57,7 +57,7 @@ class gpc():
         return f"{gpc.tab * self.num_tabs}{type}{space}{block_name}" + '{\n'
     
     def start_function(self, function_name, arg_array):
-        arg_string = self.array_to_string(arg_array)
+        arg_string = self.array_to_csv(arg_array)
         return self.start_code_block('function', f'{function_name}({arg_string})')
     
     def start_combo(self, combo_name):
@@ -132,7 +132,7 @@ class gpc():
 
         return variable_name
     
-    def array_to_string(self, array):
+    def array_to_csv(self, array):
         new_string = ''
         for item in array[:-1]:
             new_string += f'{item}, '
