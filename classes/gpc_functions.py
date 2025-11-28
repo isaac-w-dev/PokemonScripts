@@ -23,27 +23,62 @@ class gpc():
     set_led = "set_led"
     prnt = "print"
     event_press = "event_press"
+    num_per_category = [17, 8, 16, 19]
+    all_location_names = ['Centrico Plaza', 'Gare de Lumiose', 'Pokemon Research Lab', 'Hotel Z', 'Racine Construction', 'Restaurant Le Nah', 'Rust Syndicate Office', 'Lumiose Sewers (Canal Access)', 'Quasartico Inc.', 'Lysandre Cafe', 'Lumiose Sewers (Main Access)', 'Hotel Richissime', 'Looker Bureau', 'Lumiose Museum', 'Restaurant Le Yeah', 'Sushi High Roller', 'Restaurant Le Wow', 'Justice Dojo', 'Vert Pokemon Center', 'Bleu Pokemon Center', 'Vernal Pokemon Center', 'Magenta Pokemon Center', 'Magenta Plaza Pokemon Center', 'Rouge Pokemon Center', 'Centrico Pokemon Center', 'Jaune Pokemon Center', 'Hibernal Pokemon Center', 'Cafe Cyclone', 'Cafe Classe', 'Cafe Introversion', 'Nouveau Cafe', 'Cafe Woof', 'Cafe Soleil', 'Shutterbug Cafe', 'Nouveau Cafe Truck No. 2', 'Cafe Pokemon-Amie', 'Cafe Rouleau', 'Cafe Gallant', 'Cafe Triste', 'Nouveau Cafe Truck No. 3', 'Cafe Ultimo', 'Cafe Action', 'Cafe Kizuna', 'Cafe Bataille', 'Wild Zone 1', 'Wild Zone 2', 'Wild Zone 3', 'Wild Zone 4', 'Wild Zone 5', 'Wild Zone 6', 'Wild Zone 7', 'Wild Zone 8', 'Wild Zone 9', 'Wild Zone 10', 'Wild Zone 11', 'Wild Zone 12', 'Wild Zone 13', 'Wild Zone 14', 'Wild Zone 15', 'Wild Zone 16', 'Wild Zone 17', 'Wild Zone 18', 'Wild Zone 19', 'Wild Zone 20']
+    fastest_category_per_location = ['All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'Facilities', 'Facilities', 'Facilities', 'All travel spots', 'All travel spots', 'All travel spots', 'Facilities', 'Facilities', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones'],
+    full_coordinate_array= [[0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 0, 3], [0, 0, 4], [0, 1, -2], [0, 1, -1], [0, 1, 0], [0, 1, 1], [0, 1, 2], [1, 1, 0], [1, 2, 0], [1, 2, 1], [0, 2, -1], [0, 2, 0], [0, 2, 1], [1, -1, -1], [1, -1, 0], [2, 0, 0], [2, 0, 1], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, -2, -1], [2, -2, 0], [2, -1, -1], [2, -1, 0], [3, 0, 0], [3, 0, 1], [3, 0, 2], [3, 0, 3], [3, 0, 4], [3, 1, -2], [3, 1, -1], [3, 1, 0], [3, 1, 1], [3, -2, 0], [3, 2, 0], [3, 2, 1], [3, 2, 2], [3, -1, -3], [3, -1, -2], [3, -1, -1], [3, -1, 0], [4, 0, 0], [4, 0, 1], [4, 0, 2], [4, 0, 3], [4, 0, 4], [4, 1, -2], [4, 1, -1], [4, 1, 0], [4, 1, 1], [4, 1, 2], [4, 1, 3], [4, 2, -2], [4, 2, -1], [4, 2, 0], [4, 2, 1], [4, 2, 2], [4, 2, 3], [4, 2, 4], [4, 2, 5], [4, 2, 6]]
 
     def __init__(self, wait_time, file_name, program_name, instruction_page):
         self.wait_time = wait_time
         self.file_name = file_name
+        self.file = open(file_name, 'w')
         self.program_name = program_name
         self.instruction_page = instruction_page
 
 # ************** VARIABLE FUNCTIONS ***************************
-    def initialize_variable(self, var_name, var_type, assignment):
-        return f'{var_type} {var_name}{assignment};\n'
+    def initialize_variable(self, var_name, var_type, assignment, spaces = ' '):
+        return f'{var_type}{spaces}{var_name}{assignment};\n'
     
     def initialize_int(self, var_name, assignment):
         return self.initialize_variable(var_name, 'int', f' = {assignment}')
     
     def initialize_string(self, var_name, assignment):
+        var_name = self.string_to_variable(var_name)
         return self.initialize_variable(var_name, 'const string', f' = "{assignment}"')
 
-    def initialize_array(self, depth = 1, *args):
-        pass
+    def array_to_string(self, array, wrapper ='{}'):
+        new_string = wrapper[0]
+        for item in array[:-1]:
+            if isinstance(item, list):
+                new_string += f'{self.array_to_string(item, wrapper)}, '
+            else: new_string += f'{item}, '
+        if isinstance(array[-1], list):
+            new_string += f'{self.array_to_string(array[-1], wrapper)}'
+        else:
+            new_string += f'{array[-1]}'
+        new_string += wrapper[1]
+        return new_string
+    
+    def declare_strings_from_array(self, string_array):
+        new_string = ''
+        for item in string_array:
+            new_string += self.initialize_string(item, item)
+        return new_string
 
-    def create_define(self, var_name, value):
+    def get_depth(self, array):
+        depth = 1
+        for item in array:
+            if isinstance(item, list):
+                depth += self.get_depth(item)
+                break
+        return depth
+
+    def initialize_array(self, name, array, var_type ='const int', brackets = '{}'):
+        returned_string = f'{var_type} {name}{'[]' * self.get_depth(array)} = '
+        returned_string += self.array_to_string(array, brackets)
+        return f'{returned_string};\n'
+
+    def define_value(self, var_name, value):
         return self.initialize_variable(var_name, 'define', f' = {value}')
     
     def declare_var(self, var_name, var_type):
@@ -51,6 +86,9 @@ class gpc():
     
     def declare_int(self, var_name):
         return self.declare_var(var_name, 'int')
+    
+    def reassign_variable(self, var_name, value):
+        return self.initialize_variable(var_name, '', f' = {value}', '')
 
 # ************** CODE BLOCK WRITING SECTION *******************
     def start_code_block(self, type, block_name, space = ' '):

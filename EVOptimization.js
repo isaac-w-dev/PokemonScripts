@@ -1,0 +1,25 @@
+let hpEV;
+let defEV;
+let spDefEV;
+//Must be less than or equal to 31 each and all add up to 62
+let def = 0;
+let spDef = 0;
+let attack = 0;
+let attackModifier = 1;
+let spAttack = 0;
+let spAttackModifier = 1;
+let level = 50;
+const remainingEVs = 62;
+let movePower = 90;
+let burn = 1;
+let spread = 1;
+let weather = 1;
+let terrain = 1;
+let critical = 1;
+let random = 1;
+let STAB = 1;
+let typeMatchup = 1;
+remainingEVs = hpEV + defEV + spDefEV;
+let damageModifier = burn * spread * weather * critical * random * terrain * STAB * typeMatchup;
+let defDamage = ((2 * level / 5) + 2) * movePower * attack * attackModifier / (((defense + defEV)*DefModifier)/50 + 2) * damageModifier - hpEv;
+let spDefDamage = ((2*level / 5) + 2) * movePower * spAttack * spAttackModifier / (((spDef + spDefEV) * spDefModifier) / 50 + 2) * damageModifier - hpEV;
