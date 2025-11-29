@@ -28,6 +28,7 @@ class gpc():
     fastest_category_per_location = ['All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'Facilities', 'Facilities', 'Facilities', 'All travel spots', 'All travel spots', 'All travel spots', 'Facilities', 'Facilities', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones'],
     full_coordinate_array= [[0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 0, 3], [0, 0, 4], [0, 1, -2], [0, 1, -1], [0, 1, 0], [0, 1, 1], [0, 1, 2], [1, 1, 0], [1, 2, 0], [1, 2, 1], [0, 2, -1], [0, 2, 0], [0, 2, 1], [1, -1, -1], [1, -1, 0], [2, 0, 0], [2, 0, 1], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, -2, -1], [2, -2, 0], [2, -1, -1], [2, -1, 0], [3, 0, 0], [3, 0, 1], [3, 0, 2], [3, 0, 3], [3, 0, 4], [3, 1, -2], [3, 1, -1], [3, 1, 0], [3, 1, 1], [3, -2, 0], [3, 2, 0], [3, 2, 1], [3, 2, 2], [3, -1, -3], [3, -1, -2], [3, -1, -1], [3, -1, 0], [4, 0, 0], [4, 0, 1], [4, 0, 2], [4, 0, 3], [4, 0, 4], [4, 1, -2], [4, 1, -1], [4, 1, 0], [4, 1, 1], [4, 1, 2], [4, 1, 3], [4, 2, -2], [4, 2, -1], [4, 2, 0], [4, 2, 1], [4, 2, 2], [4, 2, 3], [4, 2, 4], [4, 2, 5], [4, 2, 6]]
     locations_in_file = [
+    ["Instruction Page"],
     ["Facilities",
     "Centrico Plaza", "Gare de Lumiose", "Pokemon Research Lab", "Hotel Z", "Racine Construction", "Restaurant Le Nah", "Rust Syndicate Office",
     "Lumiose Sewers (Canal Access)", "Quasartico Inc.", "Lysandre Cafe", "Lumiose Sewers (Main Access)", "Hotel Richissime", "Looker Bureau", "Lumiose Museum",
@@ -114,21 +115,24 @@ class gpc():
     def start_code_block(self, type, block_name, space = ' '):
         return f"{type}{space}{block_name}" + '{\n'
     
-    def start_function(self, function_name, arg_array):
-        arg_string = self.array_to_csv(arg_array)
-        return self.start_code_block('function', f'{function_name}({arg_string})')
+    def start_function(self, function_name, array):
+        arg_string = self.array_to_csv(array)
+        return self.start_code_block('function', f'{function_name} ({arg_string})')
     
     def start_combo(self, combo_name):
         return self.start_code_block('combo', f'{combo_name}()')
-        
+    
+    def start_for_loop(self, initialization, conditional, increment):
+        return self.start_code_block('', f'for ({initialization}; {conditional}; {increment})', '')
+    
     def start_if_block(self, condition):
         return self.start_code_block('if', f'({condition})')
     
     def start_elif(self, condition):
-        return self.start_code_block('else if', f'({condition})')
+        return self.start_code_block('else if ', f'({condition})')
     
     def start_else(self):
-        return self.start_code_block('', 'else', space = '')
+        return self.start_code_block('', 'else ', space = '')
 
     def end_block(self):
         return '}\n\n'
@@ -155,9 +159,14 @@ class gpc():
         for i, command in enumerate(command_array):
             new_string += self.write_command(command, array_of_array_input[i])
         return new_string
-    
+    def call_function(self, command_name, input_array = []):
+        return self.write_command(command_name, input_array)
+
+    def generate_print(self, x_val, y_val, font_type, font_color, string_address):
+        return self.write_command("print", [x_val, y_val, font_type, font_color, string_address])  
+
     def button_input(self, button):
-        return self.cluster_commands([gpc.set_val, gpc.wait, gpc.set_val, gpc.wait], [[button, 100], gpc.wait_time, [button, 0], gpc.wait_time])
+        return self.cluster_commands([gpc.set_val, gpc.wait, gpc.set_val, gpc.wait], [[button, 100], [self.wait_time], [button, 0], [self.wait_time]])
 
     def button_sequence(self, button_array):
         new_string = ''
@@ -206,6 +215,3 @@ class gpc():
             new_string += f'{item}, '
         new_string += array[-1]
         return new_string
-
-    def insert_tabs(self):
-        pass
