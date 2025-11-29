@@ -23,10 +23,27 @@ class gpc():
     set_led = "set_led"
     prnt = "print"
     event_press = "event_press"
-    num_per_category = [17, 8, 16, 19]
+    num_per_category = [18, 9, 17, 20]
     all_location_names = ['Centrico Plaza', 'Gare de Lumiose', 'Pokemon Research Lab', 'Hotel Z', 'Racine Construction', 'Restaurant Le Nah', 'Rust Syndicate Office', 'Lumiose Sewers (Canal Access)', 'Quasartico Inc.', 'Lysandre Cafe', 'Lumiose Sewers (Main Access)', 'Hotel Richissime', 'Looker Bureau', 'Lumiose Museum', 'Restaurant Le Yeah', 'Sushi High Roller', 'Restaurant Le Wow', 'Justice Dojo', 'Vert Pokemon Center', 'Bleu Pokemon Center', 'Vernal Pokemon Center', 'Magenta Pokemon Center', 'Magenta Plaza Pokemon Center', 'Rouge Pokemon Center', 'Centrico Pokemon Center', 'Jaune Pokemon Center', 'Hibernal Pokemon Center', 'Cafe Cyclone', 'Cafe Classe', 'Cafe Introversion', 'Nouveau Cafe', 'Cafe Woof', 'Cafe Soleil', 'Shutterbug Cafe', 'Nouveau Cafe Truck No. 2', 'Cafe Pokemon-Amie', 'Cafe Rouleau', 'Cafe Gallant', 'Cafe Triste', 'Nouveau Cafe Truck No. 3', 'Cafe Ultimo', 'Cafe Action', 'Cafe Kizuna', 'Cafe Bataille', 'Wild Zone 1', 'Wild Zone 2', 'Wild Zone 3', 'Wild Zone 4', 'Wild Zone 5', 'Wild Zone 6', 'Wild Zone 7', 'Wild Zone 8', 'Wild Zone 9', 'Wild Zone 10', 'Wild Zone 11', 'Wild Zone 12', 'Wild Zone 13', 'Wild Zone 14', 'Wild Zone 15', 'Wild Zone 16', 'Wild Zone 17', 'Wild Zone 18', 'Wild Zone 19', 'Wild Zone 20']
     fastest_category_per_location = ['All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'All travel spots', 'Facilities', 'Facilities', 'Facilities', 'All travel spots', 'All travel spots', 'All travel spots', 'Facilities', 'Facilities', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Pokemon Centers', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Cafes', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones', 'Wild Zones'],
     full_coordinate_array= [[0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 0, 3], [0, 0, 4], [0, 1, -2], [0, 1, -1], [0, 1, 0], [0, 1, 1], [0, 1, 2], [1, 1, 0], [1, 2, 0], [1, 2, 1], [0, 2, -1], [0, 2, 0], [0, 2, 1], [1, -1, -1], [1, -1, 0], [2, 0, 0], [2, 0, 1], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, -2, -1], [2, -2, 0], [2, -1, -1], [2, -1, 0], [3, 0, 0], [3, 0, 1], [3, 0, 2], [3, 0, 3], [3, 0, 4], [3, 1, -2], [3, 1, -1], [3, 1, 0], [3, 1, 1], [3, -2, 0], [3, 2, 0], [3, 2, 1], [3, 2, 2], [3, -1, -3], [3, -1, -2], [3, -1, -1], [3, -1, 0], [4, 0, 0], [4, 0, 1], [4, 0, 2], [4, 0, 3], [4, 0, 4], [4, 1, -2], [4, 1, -1], [4, 1, 0], [4, 1, 1], [4, 1, 2], [4, 1, 3], [4, 2, -2], [4, 2, -1], [4, 2, 0], [4, 2, 1], [4, 2, 2], [4, 2, 3], [4, 2, 4], [4, 2, 5], [4, 2, 6]]
+    locations_in_file = [
+    ["Facilities",
+    "Centrico Plaza", "Gare de Lumiose", "Pokemon Research Lab", "Hotel Z", "Racine Construction", "Restaurant Le Nah", "Rust Syndicate Office",
+    "Lumiose Sewers (Canal Access)", "Quasartico Inc.", "Lysandre Cafe", "Lumiose Sewers (Main Access)", "Hotel Richissime", "Looker Bureau", "Lumiose Museum",
+    "Restaurant Le Yeah", "Sushi High Roller", "Restaurant Le Wow", "Justice Dojo"],
+    ["Pokemon Centers",
+    "Vert Pokemon Center", "Bleu Pokemon Center", "Vernal Pokemon Center", "Magenta Pokemon Center", "Magenta Plaza Pokemon Center", "Rouge Pokemon Center", "Centrico Pokemon Center",
+    "Jaune Pokemon Center", "Hibernal Pokemon Center"],
+    ["Cafes",
+    "Cafe Cyclone", "Cafe Classe", "Cafe Introversion", "Nouveau Cafe", "Cafe Woof", "Cafe Soleil", "Shutterbug Cafe",
+    "Nouveau Cafe Truck No. 2", "Cafe Pokemon-Amie", "Cafe Rouleau", "Cafe Gallant", "Cafe Triste", "Nouveau Cafe Truck No. 3", "Cafe Ultimo",
+    "Cafe Action", "Cafe Kizuna", "Cafe Bataille"],
+    ["Wild Zones",
+    "Wild Zone 1", "Wild Zone 2", "Wild Zone 3", "Wild Zone 4", "Wild Zone 5", "Wild Zone 6", "Wild Zone 7",
+    "Wild Zone 8", "Wild Zone 9", "Wild Zone 10", "Wild Zone 11", "Wild Zone 12", "Wild Zone 13", "Wild Zone 14",
+    "Wild Zone 15", "Wild Zone 16", "Wild Zone 17", "Wild Zone 18", "Wild Zone 19", "Wild Zone 20"]
+    ]
 
     def __init__(self, wait_time, file_name, program_name, instruction_page):
         self.wait_time = wait_time
@@ -89,10 +106,13 @@ class gpc():
     
     def reassign_variable(self, var_name, value):
         return self.initialize_variable(var_name, '', f' = {value}', '')
+    
+    def var_plus_equal(self, var_name, added_value):
+        return self.initialize_variable(var_name, '', f' += {added_value}', '')
 
 # ************** CODE BLOCK WRITING SECTION *******************
     def start_code_block(self, type, block_name, space = ' '):
-        return f"{gpc.tab * self.num_tabs}{type}{space}{block_name}" + '{\n'
+        return f"{type}{space}{block_name}" + '{\n'
     
     def start_function(self, function_name, arg_array):
         arg_string = self.array_to_csv(arg_array)
@@ -110,15 +130,24 @@ class gpc():
     def start_else(self):
         return self.start_code_block('', 'else', space = '')
 
-    def end_block(num_tabs):
-        return f'{gpc.tab * num_tabs}' + '}\n\n'
+    def end_block(self):
+        return '}\n\n'
+    
+    def create_full_block(self, firstline, *args):
+        new_string = firstline
+        for line in args:
+            new_string += line
+        new_string += self.end_block()
+        return new_string
     
 # ************** COMMAND WRITING SECTION **********************
     def write_command(self, command_name, input_array):
-        new_string = f'{self.tab * self.num_tabs}{command_name}('
-        for input in input_array[:-1]:
-            new_string += f'{input}, '
-        new_string += f'{input_array[-1]});\n'
+        new_string = f'{command_name}('
+        if len(input_array) > 0:
+            for input in input_array[:-1]:
+                new_string += f'{input}, '
+            new_string += f'{input_array[-1]}'
+        new_string += ');\n'
         return new_string
 
     def cluster_commands(self, command_array, array_of_array_input):
@@ -172,6 +201,7 @@ class gpc():
     
     def array_to_csv(self, array):
         new_string = ''
+        if len(array) < 1: return new_string
         for item in array[:-1]:
             new_string += f'{item}, '
         new_string += array[-1]

@@ -5,9 +5,10 @@ int category_coordinate = 0;
 int x_coordinate = 0;
 int y_coordinate = 0;
 int coordinate_position = 0;
-const int num_per_category[] = {17, 8, 16, 19};
+const int num_per_category[] = {18, 9, 17, 20};
 const int full_coordinate_array[][] = {{0, 0, 0}, {0, 0, 1}, {0, 0, 2}, {0, 0, 3}, {0, 0, 4}, {0, 1, -2}, {0, 1, -1}, {0, 1, 0}, {0, 1, 1}, {0, 1, 2}, {1, 1, 0}, {1, 2, 0}, {1, 2, 1}, {0, 2, -1}, {0, 2, 0}, {0, 2, 1}, {1, -1, -1}, {1, -1, 0}, {2, 0, 0}, {2, 0, 1}, {2, 1, 0}, {2, 1, 1}, {2, 1, 2}, {2, -2, -1}, {2, -2, 0}, {2, -1, -1}, {2, -1, 0}, {3, 0, 0}, {3, 0, 1}, {3, 0, 2}, {3, 0, 3}, {3, 0, 4}, {3, 1, -2}, {3, 1, -1}, {3, 1, 0}, {3, 1, 1}, {3, -2, 0}, {3, 2, 0}, {3, 2, 1}, {3, 2, 2}, {3, -1, -3}, {3, -1, -2}, {3, -1, -1}, {3, -1, 0}, {4, 0, 0}, {4, 0, 1}, {4, 0, 2}, {4, 0, 3}, {4, 0, 4}, {4, 1, -2}, {4, 1, -1}, {4, 1, 0}, {4, 1, 1}, {4, 1, 2}, {4, 1, 3}, {4, 2, -2}, {4, 2, -1}, {4, 2, 0}, {4, 2, 1}, {4, 2, 2}, {4, 2, 3}, {4, 2, 4}, {4, 2, 5}, {4, 2, 6}};
 const string instruction_page = "Set Destination\nCategory: UP/DOWN\nLocation: Left/Right";
+const string facilities = "Facilities";
 const string centrico_plaza = "Centrico Plaza";
 const string gare_de_lumiose = "Gare de Lumiose";
 const string pokemon_research_lab = "Pokemon Research Lab";
@@ -26,6 +27,7 @@ const string restaurant_le_yeah = "Restaurant Le Yeah";
 const string sushi_high_roller = "Sushi High Roller";
 const string restaurant_le_wow = "Restaurant Le Wow";
 const string justice_dojo = "Justice Dojo";
+const string pokemon_centers = "Pokemon Centers";
 const string vert_pokemon_center = "Vert Pokemon Center";
 const string bleu_pokemon_center = "Bleu Pokemon Center";
 const string vernal_pokemon_center = "Vernal Pokemon Center";
@@ -35,6 +37,7 @@ const string rouge_pokemon_center = "Rouge Pokemon Center";
 const string centrico_pokemon_center = "Centrico Pokemon Center";
 const string jaune_pokemon_center = "Jaune Pokemon Center";
 const string hibernal_pokemon_center = "Hibernal Pokemon Center";
+const string cafes = "Cafes";
 const string cafe_cyclone = "Cafe Cyclone";
 const string cafe_classe = "Cafe Classe";
 const string cafe_introversion = "Cafe Introversion";
@@ -52,6 +55,7 @@ const string cafe_ultimo = "Cafe Ultimo";
 const string cafe_action = "Cafe Action";
 const string cafe_kizuna = "Cafe Kizuna";
 const string cafe_bataille = "Cafe Bataille";
+const string wild_zones = "Wild Zones";
 const string wild_zone_1 = "Wild Zone 1";
 const string wild_zone_2 = "Wild Zone 2";
 const string wild_zone_3 = "Wild Zone 3";
@@ -72,3 +76,391 @@ const string wild_zone_17 = "Wild Zone 17";
 const string wild_zone_18 = "Wild Zone 18";
 const string wild_zone_19 = "Wild Zone 19";
 const string wild_zone_20 = "Wild Zone 20";
+function get_destination(){
+	if (get_val(SWI_ZL)){
+		if (event_press(SWI_DOWN)){
+			category += 1;
+			}
+		
+		if (event_press(SWI_UP)){
+			category += -1;
+			}
+		
+		if (event_press(SWI_RIGHT)){
+			location += 1;
+			}
+		
+		if (event_press(SWI_LEFT)){
+			location += -1;
+			}
+		
+		if (category < 0){
+			category = 4;
+			}
+		
+		if (category < 4){
+			category = 0;
+			}
+		
+		if (location < 0){
+			location = num_per_category[category - 1];
+			}
+		
+		if (location > num_per_category[category - 1]){
+			location = 0;
+			}
+		
+		if (event_press(SWI_R)){
+			SCRIPT_RUNNING = !SCRIPT_RUNNING;
+			}
+		
+		}
+	
+	}
+
+function set_coordinates(){
+	category_coordinate = full_coordinate_array[coordinate_position][0];
+	x_coordinate = full_coordinate_array[coordinate_position][1];
+	y_coordinate = full_coordinate_array[coordinate_position][2];
+	}
+
+function display_selections(){
+	if (category == 0 || location == 0){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, facilities[0]);
+		}
+	
+	if (category == 1 || location == 0){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, centrico_plaza[0]);
+		}
+	
+	if (category == 1 || location == 1){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, gare_de_lumiose[0]);
+		coordinate_position = 0;
+		}
+	
+	if (category == 1 || location == 2){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, pokemon_research_lab[0]);
+		coordinate_position = 1;
+		}
+	
+	if (category == 1 || location == 3){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, hotel_z[0]);
+		coordinate_position = 2;
+		}
+	
+	if (category == 1 || location == 4){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, racine_construction[0]);
+		coordinate_position = 3;
+		}
+	
+	if (category == 1 || location == 5){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, restaurant_le_nah[0]);
+		coordinate_position = 4;
+		}
+	
+	if (category == 1 || location == 6){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, rust_syndicate_office[0]);
+		coordinate_position = 5;
+		}
+	
+	if (category == 1 || location == 7){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, lumiose_sewers_canal_access[0]);
+		coordinate_position = 6;
+		}
+	
+	if (category == 1 || location == 8){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, quasartico_inc[0]);
+		coordinate_position = 7;
+		}
+	
+	if (category == 1 || location == 9){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, lysandre_cafe[0]);
+		coordinate_position = 8;
+		}
+	
+	if (category == 1 || location == 10){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, lumiose_sewers_main_access[0]);
+		coordinate_position = 9;
+		}
+	
+	if (category == 1 || location == 11){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, hotel_richissime[0]);
+		coordinate_position = 10;
+		}
+	
+	if (category == 1 || location == 12){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, looker_bureau[0]);
+		coordinate_position = 11;
+		}
+	
+	if (category == 1 || location == 13){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, lumiose_museum[0]);
+		coordinate_position = 12;
+		}
+	
+	if (category == 1 || location == 14){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, restaurant_le_yeah[0]);
+		coordinate_position = 13;
+		}
+	
+	if (category == 1 || location == 15){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, sushi_high_roller[0]);
+		coordinate_position = 14;
+		}
+	
+	if (category == 1 || location == 16){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, restaurant_le_wow[0]);
+		coordinate_position = 15;
+		}
+	
+	if (category == 1 || location == 17){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, justice_dojo[0]);
+		coordinate_position = 16;
+		}
+	
+	if (category == 1 || location == 18){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, pokemon_centers[0]);
+		coordinate_position = 17;
+		}
+	
+	if (category == 2 || location == 0){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, vert_pokemon_center[0]);
+		}
+	
+	if (category == 2 || location == 1){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, bleu_pokemon_center[0]);
+		coordinate_position = 18;
+		}
+	
+	if (category == 2 || location == 2){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, vernal_pokemon_center[0]);
+		coordinate_position = 19;
+		}
+	
+	if (category == 2 || location == 3){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, magenta_pokemon_center[0]);
+		coordinate_position = 20;
+		}
+	
+	if (category == 2 || location == 4){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, magenta_plaza_pokemon_center[0]);
+		coordinate_position = 21;
+		}
+	
+	if (category == 2 || location == 5){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, rouge_pokemon_center[0]);
+		coordinate_position = 22;
+		}
+	
+	if (category == 2 || location == 6){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, centrico_pokemon_center[0]);
+		coordinate_position = 23;
+		}
+	
+	if (category == 2 || location == 7){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, jaune_pokemon_center[0]);
+		coordinate_position = 24;
+		}
+	
+	if (category == 2 || location == 8){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, hibernal_pokemon_center[0]);
+		coordinate_position = 25;
+		}
+	
+	if (category == 2 || location == 9){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafes[0]);
+		coordinate_position = 26;
+		}
+	
+	if (category == 3 || location == 0){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_cyclone[0]);
+		}
+	
+	if (category == 3 || location == 1){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_classe[0]);
+		coordinate_position = 27;
+		}
+	
+	if (category == 3 || location == 2){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_introversion[0]);
+		coordinate_position = 28;
+		}
+	
+	if (category == 3 || location == 3){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, nouveau_cafe[0]);
+		coordinate_position = 29;
+		}
+	
+	if (category == 3 || location == 4){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_woof[0]);
+		coordinate_position = 30;
+		}
+	
+	if (category == 3 || location == 5){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_soleil[0]);
+		coordinate_position = 31;
+		}
+	
+	if (category == 3 || location == 6){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, shutterbug_cafe[0]);
+		coordinate_position = 32;
+		}
+	
+	if (category == 3 || location == 7){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, nouveau_cafe_truck_no_2[0]);
+		coordinate_position = 33;
+		}
+	
+	if (category == 3 || location == 8){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_pokemon_amie[0]);
+		coordinate_position = 34;
+		}
+	
+	if (category == 3 || location == 9){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_rouleau[0]);
+		coordinate_position = 35;
+		}
+	
+	if (category == 3 || location == 10){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_gallant[0]);
+		coordinate_position = 36;
+		}
+	
+	if (category == 3 || location == 11){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_triste[0]);
+		coordinate_position = 37;
+		}
+	
+	if (category == 3 || location == 12){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, nouveau_cafe_truck_no_3[0]);
+		coordinate_position = 38;
+		}
+	
+	if (category == 3 || location == 13){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_ultimo[0]);
+		coordinate_position = 39;
+		}
+	
+	if (category == 3 || location == 14){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_action[0]);
+		coordinate_position = 40;
+		}
+	
+	if (category == 3 || location == 15){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_kizuna[0]);
+		coordinate_position = 41;
+		}
+	
+	if (category == 3 || location == 16){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, cafe_bataille[0]);
+		coordinate_position = 42;
+		}
+	
+	if (category == 3 || location == 17){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zones[0]);
+		coordinate_position = 43;
+		}
+	
+	if (category == 4 || location == 0){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_1[0]);
+		}
+	
+	if (category == 4 || location == 1){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_2[0]);
+		coordinate_position = 44;
+		}
+	
+	if (category == 4 || location == 2){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_3[0]);
+		coordinate_position = 45;
+		}
+	
+	if (category == 4 || location == 3){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_4[0]);
+		coordinate_position = 46;
+		}
+	
+	if (category == 4 || location == 4){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_5[0]);
+		coordinate_position = 47;
+		}
+	
+	if (category == 4 || location == 5){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_6[0]);
+		coordinate_position = 48;
+		}
+	
+	if (category == 4 || location == 6){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_7[0]);
+		coordinate_position = 49;
+		}
+	
+	if (category == 4 || location == 7){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_8[0]);
+		coordinate_position = 50;
+		}
+	
+	if (category == 4 || location == 8){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_9[0]);
+		coordinate_position = 51;
+		}
+	
+	if (category == 4 || location == 9){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_10[0]);
+		coordinate_position = 52;
+		}
+	
+	if (category == 4 || location == 10){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_11[0]);
+		coordinate_position = 53;
+		}
+	
+	if (category == 4 || location == 11){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_12[0]);
+		coordinate_position = 54;
+		}
+	
+	if (category == 4 || location == 12){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_13[0]);
+		coordinate_position = 55;
+		}
+	
+	if (category == 4 || location == 13){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_14[0]);
+		coordinate_position = 56;
+		}
+	
+	if (category == 4 || location == 14){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_15[0]);
+		coordinate_position = 57;
+		}
+	
+	if (category == 4 || location == 15){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_16[0]);
+		coordinate_position = 58;
+		}
+	
+	if (category == 4 || location == 16){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_17[0]);
+		coordinate_position = 59;
+		}
+	
+	if (category == 4 || location == 17){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_18[0]);
+		coordinate_position = 60;
+		}
+	
+	if (category == 4 || location == 18){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_19[0]);
+		coordinate_position = 61;
+		}
+	
+	if (category == 4 || location == 19){
+		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_20[0]);
+		coordinate_position = 62;
+		}
+	
+	set_coordinates();
+	}
+
+

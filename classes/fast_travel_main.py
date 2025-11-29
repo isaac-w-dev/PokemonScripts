@@ -3,22 +3,10 @@ from gpc_functions import gpc
 class main():
     def __init__(self):
         self.g = gpc(100, "auto_fast_travel.gpc", "Auto Fast Travel", r"Set Destination\nCategory: UP/DOWN\nLocation: Left/Right")
-#         print(self.array_to_string([
-# ["Centrico Plaza", "Gare de Lumiose", "Pokemon Research Lab", "Hotel Z", "Racine Construction", "Restaurant Le Nah", "Rust Syndicate Office",
-# "Lumiose Sewers (Canal Access)", "Quasartico Inc.", "Lysandre Cafe", "Lumiose Sewers (Main Access)", "Hotel Richissime", "Looker Bureau", "Lumiose Museum",
-# "Restaurant Le Yeah", "Sushi High Roller", "Restaurant Le Wow", "Justice Dojo"],
-# ["Vert Pokemon Center", "Bleu Pokemon Center", "Vernal Pokemon Center", "Magenta Pokemon Center", "Magenta Plaza Pokemon Center", "Rouge Pokemon Center", "Centrico Pokemon Center",
-# "Jaune Pokemon Center", "Hibernal Pokemon Center"],
-# ["Cafe Cyclone", "Cafe Classe", "Cafe Introversion", "Nouveau Cafe", "Cafe Woof", "Cafe Soleil", "Shutterbug Cafe",
-# "Nouveau Cafe Truck No. 2", "Cafe Pokemon-Amie", "Cafe Rouleau", "Cafe Gallant", "Cafe Triste", "Nouveau Cafe Truck No. 3", "Cafe Ultimo",
-# "Cafe Action", "Cafe Kizuna", "Cafe Bataille"],
-# ["Wild Zone 1", "Wild Zone 2", "Wild Zone 3", "Wild Zone 4", "Wild Zone 5", "Wild Zone 6", "Wild Zone 7",
-# "Wild Zone 8", "Wild Zone 9", "Wild Zone 10", "Wild Zone 11", "Wild Zone 12", "Wild Zone 13", "Wild Zone 14",
-# "Wild Zone 15", "Wild Zone 16", "Wild Zone 17", "Wild Zone 18", "Wild Zone 19", "Wild Zone 20"]
-# ], '[]'))
-        self.initialize_variables()
+        self.main()
+        # self.g.file.write(self.initialize_variables())
 
-    def convert_single_array(converted_array):
+    def convert_single_array(self, converted_array):
         output_array = []
         for array in converted_array:
             for item in array[:]:
@@ -63,41 +51,50 @@ class main():
         end_block(num_tabs, file)
 
 # ********************NEXT STARTING POINT**********************
-    def write_selections():
-        num_tabs = 1
-        file.write("function get_destination()" + r'{' + '\n')
-        generate_if(f'get_val({zl})', num_tabs, file)
-        num_tabs += 1
-        num_tabs += 1
-        generate_if_event_press(dd, "category", 1, num_tabs, file)
-        generate_if_event_press(du, "category", -1, num_tabs, file)
-        generate_if_event_press(dl, "location", -1, num_tabs, file)
-        generate_if_event_press(dr, "location", 1, num_tabs, file)
-        generate_if_reassignment("category", "< 0", 4, num_tabs)
-        generate_if_reassignment("category", "> 4", 0, num_tabs)
-        generate_if_reassignment('location', '< 0', 'num_per_category[category - 1]', num_tabs)
-        generate_if_reassignment('location', '> num_per_category[category - 1]', 0, num_tabs)
-        generate_if(f'event_press({rb})', num_tabs, file)
-        assign_variable('SCRIPT_RUNNING', '!SCRIPT_RUNNING', num_tabs)
-        end_block(num_tabs, file)
-        end_block(num_tabs - 1, file)
-        end_block(num_tabs - 2, file)
+    def write_selections(self):
+        if_block = self.g.create_full_block
+        start_block = self.g.start_if_block
+        plus_equal = self.g.var_plus_equal
+        reassign = self.g.reassign_variable
+        new_string = if_block(self.g.start_function("get_destination", []),
+                        if_block(start_block(f'get_val({gpc.zl})'),
+                            if_block(start_block(f'event_press({gpc.dd})'),
+                                plus_equal('category', 1)),
+                            if_block(start_block(f'event_press({gpc.du})'),
+                                plus_equal('category', -1)),
+                            if_block(start_block(f'event_press({gpc.dr})'),
+                                plus_equal('location', 1)),
+                            if_block(start_block(f'event_press({gpc.dl})'),
+                                plus_equal('location', -1)),
+                            if_block(start_block(f'category < 0'),
+                                reassign('category', 4)),
+                            if_block(start_block(f'category < 4'),
+                                reassign('category', 0)),
+                            if_block(start_block(f'location < 0'),
+                                reassign('location', 'num_per_category[category - 1]')),
+                            if_block(start_block(f'location > num_per_category[category - 1]'),
+                                reassign('location', '0')),
+                            if_block(start_block(f'event_press({gpc.rb})'),
+                                reassign('SCRIPT_RUNNING', '!SCRIPT_RUNNING')
+                                )
+                            )
+                        )
+        return new_string
     
-    def generate_print(name, num_tabs, file):
+    def generate_print(self, name):
         # write_command(x_value, y_value, font, color, string_address)
-        write_command("print", [20, 20, "OLED_FONT_MEDIUM", "OLED_WHITE", name], num_tabs, file)    
+        return self.g.write_command("print", [20, 20, "OLED_FONT_MEDIUM", "OLED_WHITE", name])    
 
 
-    def set_coordinate_position(i, num_tabs, file):
-        assign_variable("coordinate_position", i, num_tabs)
+    def set_coordinate_position(self, i):
+        return self.g.reassign_variable("coordinate_position", i)
 
-    def set_coordinates(i, array, num_tabs, file):
-        file.write('function set_coordinates()' + r"{" + "\n")
-        num_tabs += 1
-        assign_variable("category_coordinate", f"{array}[{i}][0]", num_tabs)
-        assign_variable("x_coordinate", f"{array}[{i}][1]", num_tabs)
-        assign_variable("y_coordinate", f"{array}[{i}][2]", num_tabs)
-        end_block(num_tabs - 1, file)
+    def set_coordinates(self):
+        new_string = self.g.create_full_block(self.g.start_function('set_coordinates', []),
+                                            self.g.reassign_variable('category_coordinate', f'full_coordinate_array[coordinate_position][0]'),
+                                            self.g.reassign_variable('x_coordinate', f'full_coordinate_array[coordinate_position][1]'),
+                                            self.g.reassign_variable('y_coordinate', f'full_coordinate_array[coordinate_position][2]'))
+        return new_string
 
     def assignment_string(name, value):
         string = f'{name} = {value};\n'
@@ -108,34 +105,64 @@ class main():
 
         return new_string
 
-    def generate_statement_array(statement_array, num_tabs):
+    def generate_statement_array(self, statement_array):
         for item in statement_array:
-            new_string += f'{num_tabs * '\t'}{item}'
-            new_string += '\t}\n'
+            new_string += f'{item}'
+            new_string += '}\n'
         return new_string
 
-    def display_selection(num_tabs, file):
-        file.write('function display_selection()' + r'{' + '\n')
-        tab = '\t'
-        category = 1
+    def display_selections(self):
+        function = self.g.start_function
+        if_block = self.g.create_full_block
+        start_if = self.g.start_if_block
+        new_string = function('display_selections', [])
+        category = 0
         location_num = 0
-        for i, location in enumerate(each_location):
-            category_index = category - 1
-            if num_per_category[category_index] < location_num:
-                category += 1
-                location_num = 0
+        single_array = self.convert_single_array(gpc.locations_in_file)
+        # **************ONLY ASSIGNS 62 OUT OF 65 COORDINATES LIKELY OFFSET*********************
+        for location in single_array:
+            location = self.g.string_to_variable(location)
+            new_string += start_if(f'category == {category} || location == {location_num}')
+            new_string += self.g.write_command('print', [20, 20, 'OLED_FONT_MEDIUM', 'OLED_WHITE', f'{location}[0]'])
+            
+            if location_num == 0 or category == 0:
+                new_string += self.g.end_block()
+
             else:
-                location_num += 1
-            location_variable = string_to_variable(location)
-            file.write(f'{tab * num_tabs}if (category == {category} & location == {location_num})' + r'{' + '\n')
-            set_coordinate_position(i, num_tabs + 1, file)
-            generate_print(location_variable, num_tabs + 1, file)
-            end_block(num_tabs, file)
-        end_block(num_tabs - 1, file)
+                index = self.get_index_location(category, location_num)
+                new_string += self.set_coordinate_position(index)
+                new_string += self.g.end_block()
+            category, location_num = self.return_next_location(category, location_num)
+        new_string += self.g.write_command('set_coordinates', [])
+        new_string += self.g.end_block()
+        return new_string
+
+    def return_next_location(self, category, location):
+        if category == 0:
+            return 1, 0
+        category_index = category - 1
+
+        if (gpc.num_per_category[category_index]) <= location:
+            category += 1
+            location = 0
+        else:
+            location += 1
+
+        return category, location
+
+    def get_index_location(self, category, location):
+        if category == 0 or location == 0: print("Error occured either location or category is 0")
+        index = -1
+        for i in range(category - 1, 0, -1):
+            index += gpc.num_per_category[i - 1]
+        index += location
+        return index
+        
+
 
     def initialize_variables(self):
-        new_string = ''
-        new_string += self.g.initialize_int("SCRIPT_RUNNING", "FALSE")
+        display_names = self.convert_single_array(gpc.locations_in_file)
+        new_string = self.g.initialize_int("SCRIPT_RUNNING", "FALSE")
         new_string += self.g.initialize_int("category", "0")
         new_string += self.g.initialize_int("location", "0")
         new_string += self.g.initialize_int('category_coordinate', 0)
@@ -145,8 +172,30 @@ class main():
         new_string += self.g.initialize_array('num_per_category', gpc.num_per_category)
         new_string += self.g.initialize_array('full_coordinate_array', gpc.full_coordinate_array)
         new_string += self.g.initialize_string("instruction_page", self.g.instruction_page)
-        new_string += self.g.declare_strings_from_array(gpc.all_location_names)
+        new_string += self.g.declare_strings_from_array(display_names)
         return new_string
+    
+    def insert_tabs(self, new_string):
+        code_array = new_string.split('\n')
+        modified_array = []
+        num_tabs = 0
+        for line in code_array:
+            if (r'{' in line):
+                num_tabs += 1
+            if (r'}' in line):
+                num_tabs -= 1
+            print(line)
+            modified_array.append(line + '\n' + f'{num_tabs * '\t'}')
+        new_string = ''.join(modified_array)
+        return new_string
+            
+    def main(self):
+        new_string = self.initialize_variables()
+        new_string += self.write_selections()
+        new_string += self.set_coordinates()
+        new_string += self.display_selections()
+        new_string = self.insert_tabs(new_string)
+        self.g.file.write(new_string)
 
 e = main()
 
