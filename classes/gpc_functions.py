@@ -77,7 +77,7 @@ class gpc():
         new_string += wrapper[1]
         return new_string
     
-    def declare_strings_from_array(self, string_array):
+    def init_strings_from_array(self, string_array):
         new_string = ''
         for item in string_array:
             new_string += self.initialize_string(item, item)
@@ -91,7 +91,7 @@ class gpc():
                 break
         return depth
 
-    def initialize_array(self, name, array, var_type ='const int', brackets = '{}'):
+    def initialize_array(self, name, array, var_type ='const int16', brackets = '{}'):
         returned_string = f'{var_type} {name}{'[]' * self.get_depth(array)} = '
         returned_string += self.array_to_string(array, brackets)
         return f'{returned_string};\n'
@@ -115,12 +115,12 @@ class gpc():
     def start_code_block(self, type, block_name, space = ' '):
         return f"{type}{space}{block_name}" + '{\n'
     
-    def start_function(self, function_name, array):
+    def start_function(self, function_name, array = []):
         arg_string = self.array_to_csv(array)
         return self.start_code_block('function', f'{function_name} ({arg_string})')
     
     def start_combo(self, combo_name):
-        return self.start_code_block('combo', f'{combo_name}()')
+        return self.start_code_block('combo', f'{combo_name}')
     
     def start_for_loop(self, initialization, conditional, increment):
         return self.start_code_block('', f'for ({initialization}; {conditional}; {increment})', '')
@@ -145,7 +145,7 @@ class gpc():
         return new_string
     
 # ************** COMMAND WRITING SECTION **********************
-    def write_command(self, command_name, input_array):
+    def write_command(self, command_name, input_array = []):
         new_string = f'{command_name}('
         if len(input_array) > 0:
             for input in input_array[:-1]:
@@ -154,21 +154,25 @@ class gpc():
         new_string += ');\n'
         return new_string
 
-    def cluster_commands(self, command_array, array_of_array_input):
+    def command_sequence(self, command_array, array_of_array_input):
         new_string = ''
         for i, command in enumerate(command_array):
             new_string += self.write_command(command, array_of_array_input[i])
         return new_string
+    
     def call_function(self, command_name, input_array = []):
         return self.write_command(command_name, input_array)
 
+    def call_combo(self, command_name):
+        return self.write_command('combo_run', [command_name])
+    
     def generate_print(self, x_val, y_val, font_type, font_color, string_address):
-        return self.write_command("print", [x_val, y_val, font_type, font_color, string_address])  
+        return self.write_command("print", [x_val, y_val, font_type, font_color, f'{string_address}[0]'])  
 
     def button_input(self, button):
-        return self.cluster_commands([gpc.set_val, gpc.wait, gpc.set_val, gpc.wait], [[button, 100], [self.wait_time], [button, 0], [self.wait_time]])
+        return self.command_sequence([gpc.set_val, gpc.wait, gpc.set_val, gpc.wait], [[button, 100], [self.wait_time], [button, 0], [self.wait_time]])
 
-    def button_sequence(self, button_array):
+    def button_sequence(self, *button_array):
         new_string = ''
         for button in button_array:
             new_string += self.button_input(button)

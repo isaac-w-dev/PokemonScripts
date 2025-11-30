@@ -1,5 +1,6 @@
 int SCRIPT_RUNNING = FALSE;
-int first_loop;
+int stage = 0;
+int first_loop = TRUE;
 int category = 0;
 int location = 0;
 int category_coordinate = 0;
@@ -7,8 +8,9 @@ int x_coordinate = 0;
 int y_coordinate = 0;
 int coordinate_position = 0;
 int i = 0;
-const int num_per_category[] = {18, 9, 17, 20};
-const int full_coordinate_array[][] = {{0, 0, 0}, {0, 0, 1}, {0, 0, 2}, {0, 0, 3}, {0, 0, 4}, {0, 1, -2}, {0, 1, -1}, {0, 1, 0}, {0, 1, 1}, {0, 1, 2}, {1, 1, 0}, {1, 2, 0}, {1, 2, 1}, {0, 2, -1}, {0, 2, 0}, {0, 2, 1}, {1, -1, -1}, {1, -1, 0}, {2, 0, 0}, {2, 0, 1}, {2, 1, 0}, {2, 1, 1}, {2, 1, 2}, {2, -2, -1}, {2, -2, 0}, {2, -1, -1}, {2, -1, 0}, {3, 0, 0}, {3, 0, 1}, {3, 0, 2}, {3, 0, 3}, {3, 0, 4}, {3, 1, -2}, {3, 1, -1}, {3, 1, 0}, {3, 1, 1}, {3, -2, 0}, {3, 2, 0}, {3, 2, 1}, {3, 2, 2}, {3, -1, -3}, {3, -1, -2}, {3, -1, -1}, {3, -1, 0}, {4, 0, 0}, {4, 0, 1}, {4, 0, 2}, {4, 0, 3}, {4, 0, 4}, {4, 1, -2}, {4, 1, -1}, {4, 1, 0}, {4, 1, 1}, {4, 1, 2}, {4, 1, 3}, {4, 2, -2}, {4, 2, -1}, {4, 2, 0}, {4, 2, 1}, {4, 2, 2}, {4, 2, 3}, {4, 2, 4}, {4, 2, 5}, {4, 2, 6}};
+const int16 num_per_category[] = {18, 9, 17, 20};
+const int16 full_coordinate_array[][] = {{0, 0, 0}, {0, 0, 1}, {0, 0, 2}, {0, 0, 3}, {0, 0, 4}, {0, 1, -2}, {0, 1, -1}, {0, 1, 0}, {0, 1, 1}, {0, 1, 2}, {1, 1, 0}, {1, 2, 0}, {1, 2, 1}, {0, 2, -1}, {0, 2, 0}, {0, 2, 1}, {1, -1, -1}, {1, -1, 0}, {2, 0, 0}, {2, 0, 1}, {2, 1, 0}, {2, 1, 1}, {2, 1, 2}, {2, -2, -1}, {2, -2, 0}, {2, -1, -1}, {2, -1, 0}, {3, 0, 0}, {3, 0, 1}, {3, 0, 2}, {3, 0, 3}, {3, 0, 4}, {3, 1, -2}, {3, 1, -1}, {3, 1, 0}, {3, 1, 1}, {3, -2, 0}, {3, 2, 0}, {3, 2, 1}, {3, 2, 2}, {3, -1, -3}, {3, -1, -2}, {3, -1, -1}, {3, -1, 0}, {4, 0, 0}, {4, 0, 1}, {4, 0, 2}, {4, 0, 3}, {4, 0, 4}, {4, 1, -2}, {4, 1, -1}, {4, 1, 0}, {4, 1, 1}, {4, 1, 2}, {4, 1, 3}, {4, 2, -2}, {4, 2, -1}, {4, 2, 0}, {4, 2, 1}, {4, 2, 2}, {4, 2, 3}, {4, 2, 4}, {4, 2, 5}, {4, 2, 6}};
+const string program_name = "ZA MENU TELEPORTATION";
 const string instruction_page = "Set Destination\nCategory: UP/DOWN\nLocation: Left/Right";
 const string facilities = "Facilities";
 const string centrico_plaza = "Centrico Plaza";
@@ -78,44 +80,175 @@ const string wild_zone_17 = "Wild Zone 17";
 const string wild_zone_18 = "Wild Zone 18";
 const string wild_zone_19 = "Wild Zone 19";
 const string wild_zone_20 = "Wild Zone 20";
+init{
+	print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, program_name[0]);
+	set_ledx(LED_1, 1);
+	set_ledx(LED_2, 2);
+	set_ledx(LED_3, 3);
+	set_ledx(LED_4, 4);
+	}
+
+main{
+	get_destination();
+	display_selections();
+	if (SCRIPT_RUNNING){
+		if (stage == 0 && !combo_running(wait_combo)){
+			if (first_loop){
+				set_coordinates();
+				}
+			
+			stage = 1;
+			}
+		
+		if (stage == 1){
+			combo_run(menu_select);
+			stage = 2;
+			}
+		
+		if (stage == 2 && !combo_running(menu_select)){
+			if (first_loop){
+				combo_run(select_category);
+				first_loop = FALSE;
+				}
+			
+			stage = 3;
+			}
+		
+		if (stage == 3 && !combo_running(select_category)){
+			combo_run(coordinate_navigation);
+			stage = 4;
+			}
+		
+		if (stage == 4 && !combo_running(coordinate_navigation)){
+			combo_run(wait_combo);
+			stage = 0;
+			}
+		
+		}
+	
+	else {
+		combo_stop_all();
+		}
+	
+	}
+
+combo wait_combo{
+	wait(6000);
+	}
+
+combo menu_select{
+	set_val(SWI_PLUS, 100);
+	wait(100);
+	set_val(SWI_PLUS, 0);
+	wait(100);
+	set_val(SWI_Y, 100);
+	wait(100);
+	set_val(SWI_Y, 0);
+	wait(100);
+	}
+
+combo select_category{
+	set_val(SWI_MINUS, 100);
+	wait(100);
+	set_val(SWI_MINUS, 0);
+	wait(100);
+	for (i = 0; i < category_coordinate; i++){
+		set_val(SWI_DOWN, 100);
+		wait(100);
+		set_val(SWI_DOWN, 0);
+		wait(100);
+		}
+	
+	set_val(SWI_A, 100);
+	wait(100);
+	set_val(SWI_A, 0);
+	wait(100);
+	}
+
+combo coordinate_navigation{
+	if (x_coordinate < 0){
+		for (i = 0; i < (x_coordinate * -1); i++){
+			set_val(SWI_LEFT, 100);
+			wait(100);
+			set_val(SWI_LEFT, 0);
+			wait(100);
+			}
+		
+		}
+	
+	else {
+		for (i = 0; i < x_coordinate; i++){
+			set_val(SWI_RIGHT, 100);
+			wait(100);
+			set_val(SWI_RIGHT, 0);
+			wait(100);
+			}
+		
+		}
+	
+	if (y_coordinate < 0){
+		for (i = 0; i < (y_coordinate * -1); i++){
+			set_val(SWI_UP, 100);
+			wait(100);
+			set_val(SWI_UP, 0);
+			wait(100);
+			}
+		
+		}
+	
+	else {
+		for (i = 0; i < y_coordinate; i++){
+			set_val(SWI_DOWN, 100);
+			wait(100);
+			set_val(SWI_DOWN, 0);
+			wait(100);
+			}
+		
+		}
+	
+	}
+
 function get_destination (){
 	if (get_val(SWI_ZL)){
 		if (event_press(SWI_DOWN)){
 			category += 1;
-			first_loop = TRUE;
+			SCRIPT_RUNNING = FALSE;
 			}
 		
 		if (event_press(SWI_UP)){
 			category += -1;
-			first_loop = TRUE;
+			SCRIPT_RUNNING = FALSE;
 			}
 		
 		if (event_press(SWI_RIGHT)){
 			location += 1;
+			SCRIPT_RUNNING = FALSE;
 			}
 		
 		if (event_press(SWI_LEFT)){
 			location += -1;
+			SCRIPT_RUNNING = FALSE;
 			}
 		
 		if (category < 0){
 			category = 4;
 			}
 		
-		if (category < 4){
+		if (category > 4){
 			category = 0;
 			}
 		
 		if (category != 0 && location < 0){
-			location = num_per_category[category - 1];
+			location = num_per_category[category - 1] - 1;
 			}
 		
-		if (category != 0 && location > num_per_category[category - 1]){
+		if (category != 0 && location >= num_per_category[category - 1]){
 			location = 0;
 			}
 		
 		if (event_press(SWI_R)){
 			SCRIPT_RUNNING = !SCRIPT_RUNNING;
+			first_loop = TRUE;
 			}
 		
 		}
@@ -126,6 +259,7 @@ function set_coordinates (){
 	category_coordinate = full_coordinate_array[coordinate_position][0];
 	x_coordinate = full_coordinate_array[coordinate_position][1];
 	y_coordinate = full_coordinate_array[coordinate_position][2];
+	stage = 1;
 	}
 
 function display_selections (){
@@ -467,78 +601,6 @@ function display_selections (){
 	if (category == 4 && location == 20){
 		print(20, 20, OLED_FONT_MEDIUM, OLED_WHITE, wild_zone_20[0]);
 		coordinate_position = 63;
-		}
-	
-	set_coordinates();
-	}
-
-function map_to_menu (){
-	for (i = 0; i < category_coordinate; i++){
-		set_val(SWI_DOWN, 100);
-		wait(100);
-		set_val(SWI_DOWN, 0);
-		wait(100);
-		}
-	
-	set_val(SWI_A, 100);
-	wait(100);
-	set_val(SWI_A, 0);
-	wait(100);
-	}
-
-function write_coordinate_navigation (){
-	if (x_coordinate < 0){
-		for (i = 0; i < (x_coordinate * -1); i++){
-			set_val(SWI_LEFT, 100);
-			wait(100);
-			set_val(SWI_LEFT, 0);
-			wait(100);
-			}
-		
-		}
-	
-	else {
-		for (i = 0; i < x_coordinate; i++){
-			set_val(SWI_RIGHT, 100);
-			wait(100);
-			set_val(SWI_RIGHT, 0);
-			wait(100);
-			}
-		
-		}
-	
-	if (y_coordinate < 0){
-		for (i = 0; i < (y_coordinate * -1); i++){
-			set_val(SWI_UP, 100);
-			wait(100);
-			set_val(SWI_UP, 0);
-			wait(100);
-			}
-		
-		}
-	
-	else {
-		for (i = 0; i < y_coordinate; i++){
-			set_val(SWI_DOWN, 100);
-			wait(100);
-			set_val(SWI_DOWN, 0);
-			wait(100);
-			}
-		
-		}
-	
-	}
-
-main{
-	get_destination();
-	display_selections();
-	if (SCRIPT_RUNNING){
-		if (first_loop){
-			map_to_menu();
-			first_loop = FALSE;
-			}
-		
-		write_coordinate_navigation();
 		}
 	
 	}
