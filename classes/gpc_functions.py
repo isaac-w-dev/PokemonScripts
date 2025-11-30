@@ -143,6 +143,8 @@ class gpc():
             new_string += line
         new_string += self.end_block()
         return new_string
+    def write_full_combo(self, combo_name, *args):
+        return self.create_full_block(self.start_combo(combo_name), *args, self.write_command('combo_stop', [combo_name]))
     
 # ************** COMMAND WRITING SECTION **********************
     def write_command(self, command_name, input_array = []):
