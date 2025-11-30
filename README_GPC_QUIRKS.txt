@@ -15,7 +15,7 @@ Combos are sequential, but their calls are not.
 
 Adding a brief waiting period when reassigning variables prevents many headaches
 
-No known way of introducing parameters, functions and combos must reference global variables
+Functions are capable of having parameters, but combos are not.
 
 LED_2 - Green
 LED_3 - Red
