@@ -1,4 +1,5 @@
 Quirks of gpc
+
 Not all of the following is confirmed, but following these tips can prevent you from completely overhauling program logic
 
 Any combos must have wait at the top level
@@ -29,3 +30,7 @@ Combos will repeat unless explicitly stopped using combo_stop
 Any button presses need to be undone using values 100 and 0 respectively
 
 String addresses need to referenced index 0 ([0] at the end of the variable)
+
+Functions exit the main loop and run in sequence whereas combos run in parallel with the main loop.
+
+Combos are primarily used for time sensitive operations (Waiting and timing button presses)

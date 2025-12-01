@@ -45,12 +45,12 @@ class main():
     
     def write_wait_combo(self):
         call = self.g.call_function
-        new_string = self.g.write_full_combo('wait_combo', call("wait", [6000]), self.g.reassign_variable("stage", 0), call('combo_stop_all'))
+        new_string = self.g.combo_block('wait_combo', call("wait", [6000]), self.g.reassign_variable("stage", 0), call('combo_stop_all'))
         return new_string
 
     def write_selections(self):
         if_block = self.g.create_full_block
-        start_block = self.g.start_if_block
+        start_block = self.g.start_if
         plus_equal = self.g.var_plus_equal
         reassign = self.g.reassign_variable
 
@@ -104,7 +104,7 @@ class main():
     def display_selections(self):
         function = self.g.start_function
         if_block = self.g.create_full_block
-        start_if = self.g.start_if_block
+        start_if = self.g.start_if
         new_string = function('display_selections', [])
         category = 0
         location_num = 0
@@ -129,35 +129,35 @@ class main():
     
     def write_input_combos(self):
         assign = self.g.var_plus_equal
-        add_if = self.g.start_if_block
+        add_if = self.g.start_if
         block = self.g.create_full_block
-        new_string = self.g.write_full_combo('down_input_loop',
+        new_string = self.g.combo_block('down_input_loop',
                             block(add_if('!combo_running(down_input_loop)'),
                                             self.g.button_input(gpc.dd),
                                             assign('i', 1)))
-        new_string += self.g.write_full_combo('up_input_loop',
+        new_string += self.g.combo_block('up_input_loop',
                             block(add_if('!combo_running(up_input_loop)'),
                                             self.g.button_input(gpc.du),
                                             assign('i', 1)))
-        new_string += self.g.write_full_combo('left_input_loop',
+        new_string += self.g.combo_block('left_input_loop',
                             block(add_if('!combo_running(left_input_loop)'),
                                             self.g.button_input(gpc.dl),
                                             assign('i', 1)))
-        new_string += self.g.write_full_combo('right_input_loop',
+        new_string += self.g.combo_block('right_input_loop',
                             block(add_if('!combo_running(right_input_loop)'),
                                             self.g.button_input(gpc.dr),
                                             assign('i', 1)))
         return new_string
         
     def write_menu_select(self):
-        new_string = self.g.write_full_combo('menu_select', self.g.button_sequence(gpc.plus, gpc.yb))
+        new_string = self.g.combo_block('menu_select', self.g.button_sequence(gpc.plus, gpc.yb))
         return new_string
 
     def write_select_category(self):
         combo = self.g.call_combo
-        build_if = self.g.start_if_block
+        build_if = self.g.start_if
         assign = self.g.reassign_variable
-        new_string = self.g.write_full_combo('select_category',
+        new_string = self.g.combo_block('select_category',
                                             self.g.create_full_block(build_if("i == 0"), self.g.button_input(gpc.min)),
                                                 self.g.create_full_block(build_if('i < category_coordinate && first_loop == TRUE'), combo('down_input_loop')),
                                                 self.g.create_full_block(self.g.start_else(),
@@ -171,10 +171,10 @@ class main():
         block = self.g.create_full_block
         loop = self.g.start_for_loop
         combo = self.g.call_combo
-        start_if = self.g.start_if_block
+        start_if = self.g.start_if
         start_else = self.g.start_else
         call = self.g.call_function
-        new_string = self.g.write_full_combo('coordinate_navigation',
+        new_string = self.g.combo_block('coordinate_navigation',
                         block(start_if('coordinate_stage == 1'),
                             block(start_if('x_coordinate < 0'),
                                 block(start_if('i < (x_coordinate * -1)'), combo('left_input_loop')),
@@ -195,7 +195,7 @@ class main():
     def write_main(self):
         block = self.g.create_full_block
         start_main = self.g.start_code_block
-        start_if = self.g.start_if_block
+        start_if = self.g.start_if
         start_else = self.g.start_else
         combo = self.g.call_combo
         call = self.g.call_function

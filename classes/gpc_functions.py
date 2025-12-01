@@ -1,6 +1,5 @@
 class gpc():
     # Reusable variables
-    tab = '\t'
     dr = "SWI_RIGHT"
     dl = "SWI_LEFT"
     du = "SWI_UP"
@@ -119,13 +118,16 @@ class gpc():
         arg_string = self.array_to_csv(array)
         return self.start_code_block('function', f'{function_name} ({arg_string})')
     
+    def function_block(self, function_name, *statements, array = []):
+        return self.create_full_block(self.start_function(function_name, array), *statements)
+    
     def start_combo(self, combo_name):
         return self.start_code_block('combo', f'{combo_name}')
     
     def start_for_loop(self, initialization, conditional, increment):
         return self.start_code_block('', f'for ({initialization}; {conditional}; {increment})', '')
     
-    def start_if_block(self, condition):
+    def start_if(self, condition):
         return self.start_code_block('if', f'({condition})')
     
     def start_elif(self, condition):
@@ -134,6 +136,9 @@ class gpc():
     def start_else(self):
         return self.start_code_block('', 'else ', space = '')
 
+    def else_block(self, *statements):
+        return self.create_full_block(self.start_else(), *statements)
+    
     def end_block(self):
         return '}\n\n'
     
@@ -143,8 +148,14 @@ class gpc():
             new_string += line
         new_string += self.end_block()
         return new_string
-    def write_full_combo(self, combo_name, *args):
+    
+    def if_block(self, condition, *args):
+        return self.create_full_block(self.start_if(condition), *args)
+
+    def combo_block(self, combo_name, *args):
         return self.create_full_block(self.start_combo(combo_name), *args, self.write_command('combo_stop', [combo_name]))
+    
+
     
 # ************** COMMAND WRITING SECTION **********************
     def write_command(self, command_name, input_array = []):
@@ -165,8 +176,8 @@ class gpc():
     def call_function(self, command_name, input_array = []):
         return self.write_command(command_name, input_array)
 
-    def call_combo(self, command_name):
-        return self.write_command('combo_run', [command_name])
+    def call_combo(self, combo_name):
+        return self.write_command('combo_run', [combo_name])
     
     def generate_print(self, x_val, y_val, font_type, font_color, string_address):
         return self.write_command("print", [x_val, y_val, font_type, font_color, f'{string_address}[0]'])  
@@ -179,7 +190,10 @@ class gpc():
         for button in button_array:
             new_string += self.button_input(button)
         return new_string
-
+    
+    def configure_led(self, led_num, led_state, led_command = 'set_led'):
+        return self.call_function(led_command, [f'LED_{led_num}', led_state])
+    
     def coordinates_to_dpad(coordinates):
         x_coordinate_button = gpc.dr
         y_coordinate_button = gpc.dd
@@ -200,6 +214,29 @@ class gpc():
         dpad_array.append(gpc.ab)
 
         return dpad_array
+    
+    def create_wraparound(self, array, index):
+        last_index = len(array) - 1
+        if index == last_index: next_stage = 0
+        else: next_stage = index + 1
+        return next_stage
+
+    def create_combo_ladder(self, stage_name, *combos):
+        ladder_string = ''
+        for i, combo_name in enumerate(combos):
+            next_index = self.create_wraparound(combos, i)
+            ladder_string += self.create_full_block(self.start_if(f'{stage_name} == {i} && !combo_running({combos[i-1]})'), self.call_combo(combo_name), self.reassign_variable(stage_name, next_index))
+
+        return ladder_string
+
+    def create_combo_loop(self, ceiling, iterator, combo_name, stage_name, *statements):
+        ladder_string = self.if_block(f'!combo_running({combo_name})',
+                                    self.if_block(f'{iterator} < {ceiling}',
+                                                self.call_combo(combo_name), self.var_plus_equal(f'{iterator}', 1)),
+                                    self.else_block(self.var_plus_equal(stage_name, 1), *statements))
+        return ladder_string
+
+
 
 # ************** GENERAL STRING CONVERSION FUNCTIONS ***************
     def string_to_variable(self, target_string):
@@ -221,3 +258,26 @@ class gpc():
             new_string += f'{item}, '
         new_string += array[-1]
         return new_string
+
+    def convert_single_array(self, converted_array):
+        output_array = []
+        for array in converted_array:
+            for item in array[:]:
+                output_array.append(item)
+        return output_array
+# ********************** DOC FUNCTIONS **************************
+    def insert_tabs(self, new_string):
+        code_array = new_string.split('\n')
+        modified_array = []
+        num_tabs = 0
+        for line in code_array:
+            if (r'{' in line):
+                num_tabs += 1
+            if (r'}' in line):
+                num_tabs -= 1
+            modified_array.append(line + '\n' + f'{num_tabs * '\t'}')
+        new_string = ''.join(modified_array)
+        return new_string
+    
+    def write_file(self, written_string):
+        self.file.write(written_string)
