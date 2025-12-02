@@ -36,84 +36,90 @@ main{
 	}
 
 combo press_up{
-	set_val(SWI_UP, 100);
-	wait(200);
-	set_val(SWI_UP, 0);
-	wait(200);
+	wait(3000);
+	set_val(SWI_LY, 100);
+	wait(100);
+	set_val(SWI_LY, 0);
+	wait(100);
 	combo_stop(press_up);
 	}
 
 combo press_down{
-	set_val(SWI_DOWN, 100);
-	wait(200);
-	set_val(SWI_DOWN, 0);
-	wait(200);
+	wait(3000);
+	set_val(SWI_LY, -100);
+	wait(100);
+	set_val(SWI_LY, 0);
+	wait(100);
 	combo_stop(press_down);
 	}
 
 combo press_left{
-	set_val(SWI_LEFT, 100);
-	wait(200);
-	set_val(SWI_LEFT, 0);
-	wait(200);
+	wait(3000);
+	set_val(SWI_LX, -100);
+	wait(100);
+	set_val(SWI_LX, 0);
+	wait(100);
 	combo_stop(press_left);
 	}
 
 combo press_right{
-	set_val(SWI_RIGHT, 100);
-	wait(200);
-	set_val(SWI_RIGHT, 0);
-	wait(200);
+	wait(3000);
+	set_val(SWI_LX, 100);
+	wait(100);
+	set_val(SWI_LX, 0);
+	wait(100);
 	combo_stop(press_right);
 	}
 
 combo press_plus{
-	wait(2000);
+	wait(3000);
 	set_val(SWI_PLUS, 100);
-	wait(200);
+	wait(100);
 	set_val(SWI_PLUS, 0);
-	wait(200);
+	wait(100);
 	combo_stop(press_plus);
 	}
 
 combo press_minus{
-	wait(2000);
+	wait(3000);
 	set_val(SWI_MINUS, 100);
-	wait(200);
+	wait(100);
 	set_val(SWI_MINUS, 0);
-	wait(200);
+	wait(1000);
 	combo_stop(press_minus);
 	}
 
 combo press_a{
+	wait(3000);
 	set_val(SWI_A, 100);
-	wait(200);
+	wait(100);
 	set_val(SWI_A, 0);
-	wait(200);
+	wait(100);
 	combo_stop(press_a);
 	}
 
 combo press_b{
 	set_val(SWI_B, 100);
-	wait(200);
+	wait(100);
 	set_val(SWI_B, 0);
-	wait(200);
+	wait(100);
 	combo_stop(press_b);
 	}
 
 combo press_x{
 	set_val(SWI_X, 100);
-	wait(200);
+	wait(100);
 	set_val(SWI_X, 0);
-	wait(200);
+	wait(100);
 	combo_stop(press_x);
 	}
 
 combo press_y{
+	wait(3000);
 	set_val(SWI_Y, 100);
-	wait(200);
+	wait(100);
 	set_val(SWI_Y, 0);
-	wait(200);
+	wait(100);
 	combo_stop(press_y);
 	}
 
