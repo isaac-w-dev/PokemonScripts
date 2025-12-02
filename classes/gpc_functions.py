@@ -155,7 +155,8 @@ class gpc():
     def combo_block(self, combo_name, *args):
         return self.create_full_block(self.start_combo(combo_name), *args, self.write_command('combo_stop', [combo_name]))
     
-
+    def main_block(self, *args):
+        return self.create_full_block(self.start_code_block('', 'main', ''), *args)
     
 # ************** COMMAND WRITING SECTION **********************
     def write_command(self, command_name, input_array = []):
@@ -221,12 +222,17 @@ class gpc():
         else: next_stage = index + 1
         return next_stage
 
-    def create_combo_ladder(self, stage_name, *combos):
+    def create_combo_ladder(self, stage_name, parent_stage, combos):
         ladder_string = ''
         for i, combo_name in enumerate(combos):
-            next_index = self.create_wraparound(combos, i)
-            ladder_string += self.create_full_block(self.start_if(f'{stage_name} == {i} && !combo_running({combos[i-1]})'), self.call_combo(combo_name), self.reassign_variable(stage_name, next_index))
-
+            ladder_string += self.create_full_block(self.start_if(f'{stage_name} == {i} && !combo_running({combos[i-1]})'), self.call_combo(combo_name), self.var_plus_equal(stage_name, 1))
+        ladder_string += self.if_block(f'{stage_name} == {len(combos)} && !combo_running({combos[-1]})', self.var_plus_equal(parent_stage, 1), self.reassign_variable(stage_name, 0))
+        return ladder_string
+    
+    def create_function_ladder(self, stage_name, *functions_names):
+        ladder_string = ''
+        for i, function_name in enumerate(functions_names):
+            ladder_string += self.create_full_block(self.start_if(f'{stage_name} == {i}'), self.call_function(function_name))
         return ladder_string
 
     def create_combo_loop(self, ceiling, iterator, combo_name, stage_name, *statements):
